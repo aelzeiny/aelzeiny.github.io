@@ -12,6 +12,8 @@
   "author": "Ahmed Elzeiny",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-mousewheel": "^3.1.13",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
