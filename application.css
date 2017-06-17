@@ -65,22 +65,26 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #9188bf;
+  color: #f7931e;
 }
 
 img#profile {
   width: auto;
   height: auto;
-  border-radius: 133px;
+  border-radius: 163px;
   border: 5px solid #3b1378;
 }
 
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
+  color: #9188bf;
 }
 
 h2 {
   font-family: 'Lobster', cursive;
   font-size: 28px;
+}
+.cursive {
+  font-family: 'Lobster', cursive;
 }
