@@ -2,7 +2,7 @@
   "name": "AhmedElzeinyPortfolio",
   "version": "1.0.0",
   "description": "Ahmed Elzeiny Portfolio Page",
-  "main": "lib/main.js",
+  "main": "lib/entry.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server -w --inline",
