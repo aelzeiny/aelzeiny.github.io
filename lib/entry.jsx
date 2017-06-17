@@ -3,8 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
 
+
+
 require('../style/application.scss');
 require('../style/projects.scss');
+require('../style/skills.scss');
 
 document.addEventListener("DOMContentLoaded", function() {
   // init animate on scroll
