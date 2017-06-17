@@ -10,21 +10,21 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: [/\.jsx?$/],
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         },
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: ['.js', '.jsx', '.scss', '*']
   }
 };
