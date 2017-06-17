@@ -12,6 +12,7 @@
   "author": "Ahmed Elzeiny",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.1.1",
     "jquery": "^3.2.1",
     "jquery-mousewheel": "^3.1.13",
     "webpack": "^2.6.1",
