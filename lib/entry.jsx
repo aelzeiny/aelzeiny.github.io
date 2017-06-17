@@ -3,6 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
 
+require('../style/application.scss');
+require('../style/hero.scss');
+require('../style/projects.scss');
+
 document.addEventListener("DOMContentLoaded", function() {
   // init animate on scroll
   AOS.init();
