@@ -1,13 +1,12 @@
 import React from 'react';
-// import Parallax from './parallax';
-// import Projects from './projects';
-// import Skills from './skills';
+import Parallax from './parallax';
+import Projects from './projects';
+import Skills from './skills';
 
 export default function App(props) {
     return (
         <div>
-            <h1> React is kinda working</h1>
-            {/*<Parallax/>
+            <Parallax/>
             <main>
                 <img id="profile" src="assets/portfolio.png"></img>
                 
@@ -16,7 +15,7 @@ export default function App(props) {
 
                 <h2>Skills</h2>
                 <Skills />
-            </main>*/}
+            </main>
         </div>
     );
 };

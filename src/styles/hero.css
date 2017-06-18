@@ -22,29 +22,29 @@ figcaption {
 
 #base {
   opacity: 0;
-  background-image: url(../assets/SF.svg);
+  background-image: url(../../assets/SF.svg);
 }
 #layer-0 {
-  background-image: url(../assets/Layer0.svg);
+  background-image: url(../../assets/Layer0.svg);
 }
 #layer-1 {
-  background-image: url(../assets/Layer1.svg);
+  background-image: url(../../assets/Layer1.svg);
 }
 #layer-2 {
-  background-image: url(../assets/Layer2.svg);
+  background-image: url(../../assets/Layer2.svg);
 }
 #layer-3 {
-  background-image: url(../assets/Layer3.svg);
+  background-image: url(../../assets/Layer3.svg);
 }
 #layer-4 {
-  background-image: url(../assets/Layer4.svg);
+  background-image: url(../../assets/Layer4.svg);
 }
 #layer-5 {
-  background-image: url(../assets/Layer5.svg);
+  background-image: url(../../assets/Layer5.svg);
 }
 #layer-4-5 {
-  background-image: url(../assets/Layer5.5.svg);
+  background-image: url(../../assets/Layer5.5.svg);
 }
 #layer-6 {
-  background-image: url(../assets/Layer6.svg);
+  background-image: url(../../assets/Layer6.svg);
 }
