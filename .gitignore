@@ -1,3 +1,8 @@
+# Dependency directory
 node_modules
-bundle.map.js
-bundle.js
+
+# Source maps
+*.js.map
+
+# Files marked with gitigx
+*gitigx*

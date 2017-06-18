@@ -1,0 +1,22 @@
+.flexbox {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox-container > .two-column {
+	width: 50%;
+	padding: 10px;
+}
+
+.flexbox-container > .two-column:first-child {
+	margin-right: 20px;
+}
+.two-column {
+    display: inherit;
+    margin-bottom: 50px;
+}
+.two-column img:first-child {
+    margin-right: 50px;
+}

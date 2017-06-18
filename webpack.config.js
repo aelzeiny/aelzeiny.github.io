@@ -1,30 +1,24 @@
-const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
-  context: __dirname,
-  entry: "./lib/entry.jsx",
+  entry: `${__dirname}/src/index.js`,
   output: {
-    path: path.join(__dirname),
-    filename: "bundle.js",
+    path: `${__dirname}/build`,
+    publicPath: '/build/',
+    filename: 'bundle.js',
   },
+
   module: {
-    loaders: [
-      {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: [/\.jsx?$/],
-        exclude: /(node_modules)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        },
-      }
-    ]
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+    ],
   },
-  devtool: 'source-map',
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss', '*']
-  }
+
+  plugins: process.argv.indexOf('-p') === -1 ? [] : [
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false,
+      },
+    }),
+  ],
 };
