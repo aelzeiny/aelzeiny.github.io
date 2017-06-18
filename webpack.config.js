@@ -30,11 +30,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss', '*'],
   },
 
-  plugins: process.argv.indexOf('-p') === -1 ? [] : [
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false,
-      },
-    }),
-  ],
+  // plugins: process.argv.indexOf('-p') === -1 ? [] : [
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     output: {
+  //       comments: false,
+  //     },
+  //   }),
+  // ],
 };
