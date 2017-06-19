@@ -6,6 +6,7 @@ import App from './components/app';
 require('../src/styles/application.scss');
 require('../src/styles/projects.scss');
 require('../src/styles/skills.scss');
+require('../src/styles/contact.scss');
 
 document.addEventListener("DOMContentLoaded", function() {
   // init animate on scroll

@@ -5,7 +5,6 @@ class Skills extends React.Component {
     constructor(props) {
         super(props);
     }
-
     componentDidMount() {
         let data = [
             {
@@ -87,7 +86,7 @@ class Skills extends React.Component {
         let height = svg.attr('height');
         let centerX = width * 0.5;
         let centerY = height * 0.5;
-        let strength = 0.15;
+        let strength = 0.05;
         let focusedNode;
 
         let format = d3.format(',d');
@@ -223,7 +222,7 @@ class Skills extends React.Component {
             <section className="skills">
                 <h2>Skills</h2>
                 <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"></svg>
-            </section>  
+            </section>
         );
     }
 }
