@@ -13,6 +13,9 @@ class Parallax extends React.Component {
             this.velo[i] = parseInt(veloStr);
         }
         window.addEventListener("scroll", this.scroll);
+        let interval;
+        window.addEventListener("ontouchstart", interval = window.setInterval(this.scroll, 20));
+        window.addEventListener("ontouchend", window.clearInterval(interval));
     }
     
     scroll(e) {

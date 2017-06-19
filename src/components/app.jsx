@@ -13,7 +13,6 @@ export default function App(props) {
                 <h2>Projects</h2>
                 <Projects />
 
-                <h2>Skills</h2>
                 <Skills />
             </main>
         </div>
