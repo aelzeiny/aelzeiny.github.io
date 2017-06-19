@@ -10,17 +10,21 @@ class About extends React.Component {
     return (
       <section className="about container">
         <h2>ABOUT</h2>
-        <img id="profile" src="assets/portfolio.png"></img>
-        <p>
-          It’s time for me to finally admit it out loud - I have a coding problem. In college, my passion for coding had manifested itself into a CS minor.
-          In between my rigorous engineering courses, I always had one or two spare projects; even during finals week.
-          The pinnacle of my epidemic transpired in my last occupation, when I became a full-stack engineer by day and structural Engineer-In-Traing (E.I.T)
-          by late afternoon.
-        </p>
-        <p>
-          In July of this year I graduated from a full-time web-development course with less than 3% acceptance rate.
-          Finally, after 6 years of programming, I no longer have a coding problem; I now have a software-engineering career.
-        </p>
+        <div id="existential-text">
+          <img id="profile" src="assets/portfolio.png"></img>
+          <div>
+            <p>
+              It’s time for me to finally admit it out loud - <b>I have a coding problem</b>. In college, my passion for coding had manifested itself into a CS minor.
+              In between my rigorous engineering courses, I always had one or two spare projects; even during finals week.
+              The pinnacle of my epidemic transpired in my last occupation, when I became a full-stack engineer by day and structural Engineer-In-Traing (E.I.T)
+              by late afternoon.
+            </p>
+            <p>
+              In July of this year I graduated from a full-time web-development course with less than 3% acceptance rate.
+              Finally, after 6 years of programming, I no longer have a coding problem; I now have a software-engineering career.
+            </p>
+          </div>
+        </div>
       </section>
     );
   }

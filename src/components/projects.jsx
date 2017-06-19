@@ -8,20 +8,20 @@ export default function Projects(props) {
             <h2>PROJECTS</h2>
             <div  className="flexbox" id="projects">
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-right"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-right"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-right"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="fade-right"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
+                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
                 </div>
             </div>
         </section>
