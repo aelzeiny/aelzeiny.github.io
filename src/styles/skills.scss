@@ -31,9 +31,17 @@
         position: absolute;
         background-color: rgba(0, 0, 0, .4);
         font-family: 'Oswald', sans-serif;
-        font-size: 80px;
-        p:first-child {
+        width: 250px;
+        height: 100%;
+        h4 {
+            margin: 0px;
+            font-size: 40px;
             text-transform: uppercase;
+        }
+        p {
+            font-size: 20px;
+        }
+        p:first-child {
         }
     }
     img {
@@ -43,7 +51,6 @@
 
     svg {
         background-color: transparent;
-        border: 1px dashed black;
     }
 
     // Method 1) Pure CSS
@@ -59,7 +66,7 @@
         text-shadow: 0px 1px 0 #a2a2a2;
         
         &-top {
-            color: pink;
+            color: rebeccapurple;
             padding: 0;
             position: absolute;
             z-index: 1;

@@ -89,7 +89,8 @@ class Skills extends React.Component {
             }
         }
         window.addEventListener("scroll", checkScroll);
-        this.svg.addEventListener("mouseout", e => {
+        this.svg.addEventListener("mouseleave", e => {
+            console.log(e.currentTarget);
             this.setState({
                 category: 'none',
                 name: "",
@@ -276,7 +277,6 @@ class Skills extends React.Component {
                 <h2>SKILLS</h2>
                 <div className="container">
                     {this.renderHighlights()}
-                    
                     <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"></svg>
                 </div>
             </section>
@@ -286,7 +286,7 @@ class Skills extends React.Component {
     renderHighlights() {
         if(this.state.category !== "none")     
             return (<div id="highlighted">
-                <p>{this.state.category}</p>
+                <h4>{this.state.category}</h4>
                 <p>{this.state.name}</p>
                 <div className="star-ratings-css">
                     <div className={`star-ratings-css-top rank-${this.state.rank}`}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
