@@ -6,6 +6,11 @@ require('../styles/skills.scss');
 class Skills extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            category: 'none',
+            name: "",
+            rank: 0
+        };
     }
     componentDidMount() {
         let data = [
@@ -179,6 +184,8 @@ class Skills extends React.Component {
         
         simulation.nodes(nodes).on('tick', ticked);
 
+        node.on("mouseenter", data => this.highlight(data));
+
         node.append('circle')
             .attr('id', d => d.id)
             .attr('r', 0)
@@ -225,12 +232,29 @@ class Skills extends React.Component {
             .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
     }
 
+    highlight(node) {
+        console.log(node);
+        const info = {
+            category: node.cat,
+            name: node.name,
+            rank: node.value
+        };
+        this.setState(info);
+    }
 
     render() {
         return (
             <section className="skills">
                 <h2>SKILLS</h2>
-                <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"></svg>
+                <div id="highlighted">
+                    <h4>{this.state.name}</h4>
+                    <div className="star-ratings-css">
+                        <div className={`star-ratings-css-top rank-${this.state.rank}`}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <div className="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    </div>
+                </div>
+
+                <svg id="skills-svg" ref={(el) => this.svg = el} className={this.state.category} width="100%" height="500"></svg>
             </section>
         );
     }
