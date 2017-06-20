@@ -1,6 +1,8 @@
 import React from 'react';
 import * as d3 from 'd3';
 
+require('../styles/skills.scss');
+
 class Skills extends React.Component {
     constructor(props) {
         super(props);
@@ -220,7 +222,7 @@ class Skills extends React.Component {
     render() {
         return (
             <section className="skills">
-                <h2>Skills</h2>
+                <h2>SKILLS</h2>
                 <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"></svg>
             </section>
         );

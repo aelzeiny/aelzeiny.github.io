@@ -8,7 +8,6 @@ main {
   background-color: #1b0a35;
   position: relative;
   z-index: 10;
-  height: 3000px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -16,13 +15,7 @@ main {
   flex-direction: column;
   align-items: center;
   color: #f7931e;
-}
-
-img#profile {
-  width: auto;
-  height: auto;
-  border-radius: 163px;
-  border: 5px solid #3b1378;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -31,11 +24,22 @@ h1 {
 }
 
 h2 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
   font-size: 28px;
+  text-align: center;
+}
+
+main h2 {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-top: 12px;
+  margin-bottom: 5px;
 }
 .cursive {
-  font-family: 'Lobster', cursive;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
 }
 
 .flexbox {
