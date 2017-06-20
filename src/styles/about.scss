@@ -11,8 +11,14 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
     div {
       margin-left: 20px;
+    }
+    b {
+       font-family: 'Lobster', sans-serif;
+       font-weight: 100;
+       color: #f7931e;
     }
   }
 }

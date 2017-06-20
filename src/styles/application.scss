@@ -14,7 +14,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #f7931e;
+  color: #dacfd9;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -51,4 +51,10 @@ main h2 {
 
 .container {
   width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  width: 100%;
 }

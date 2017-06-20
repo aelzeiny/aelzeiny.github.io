@@ -78,12 +78,10 @@ class Skills extends React.Component {
         const bounds = this.svg.getBoundingClientRect();
         // this.buildSkills(data);
         const checkScroll = () => {
-            console.log(window.pageYOffset, screen.height / 4, bounds);
             if(window.pageYOffset > bounds.top + screen.height * 1.2) {
                 window.removeEventListener("scroll", checkScroll);
                 this.buildSkills(data);
             }
-
         }
         window.addEventListener("scroll", checkScroll);
     }
@@ -139,7 +137,6 @@ class Skills extends React.Component {
         // we use pack() to automatically calculate radius conveniently only
         // and get only the leaves
         let nodes = pack(root).leaves().map(node => {
-            // console.log('node:', node.x, (node.x - centerX) * 2);
             const data = node.data;
             return {
                 x: centerX + (node.x - centerX) * 3, // magnify start position to have transition to center movement
