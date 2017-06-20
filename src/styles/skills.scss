@@ -50,6 +50,9 @@
             -webkit-transition: width .5s linear, -webkit-transform .5s linear;
             transition: width .5s linear;
             &.rank {
+                &-0 {
+                    width: 0%;
+                }
                 &-1 {
                     width: 20%;
                 }

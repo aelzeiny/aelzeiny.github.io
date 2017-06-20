@@ -184,8 +184,6 @@ class Skills extends React.Component {
         
         simulation.nodes(nodes).on('tick', ticked);
 
-        node.on("mouseenter", data => this.highlight(data));
-
         node.append('circle')
             .attr('id', d => d.id)
             .attr('r', 0)
@@ -230,6 +228,31 @@ class Skills extends React.Component {
 
         node.append('title')
             .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
+
+        let curr, lastHighlighted;
+        node.on("mouseenter", data => {
+            this.highlight(data);
+            // if(curr && lastHighlighted !== curr)
+            //     lastHighlighted = curr;
+            // curr = data;
+            // d3.transition(500).ease(d3.easePolyOut).tween("expand", function() {
+			// 	let ir = d3.interpolateNumber(curr.r, curr.radius * 1.5);
+            //     let rir;
+            //     if (lastHighlighted) {
+            //         rir = d3.interpolateNumber(lastHighlighted.r, curr.radius);
+            //         console.log(lastHighlighted);
+            //     }
+            //     return t => {
+            //         curr.r = ir(t);
+            //         if (lastHighlighted)
+            //             lastHighlighted.r = rir(t);
+			// 		simulation.force('collide', forceCollide);
+            //     }
+            // }).on("interrupt", () => {
+            //     console.log("HEY!!!!");
+            // });
+        });
+
     }
 
     highlight(node) {
@@ -247,7 +270,7 @@ class Skills extends React.Component {
             <section className="skills">
                 <h2>SKILLS</h2>
                 <div id="highlighted">
-                    <h4>{this.state.name}</h4>
+                    {/*<h4>{this.state.name}</h4>*/}
                     <div className="star-ratings-css">
                         <div className={`star-ratings-css-top rank-${this.state.rank}`}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                         <div className="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
