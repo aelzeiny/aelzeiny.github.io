@@ -13,23 +13,22 @@
         margin-right: 20px;
     }
 }
-
+article {
+    margin-right: 50px;
+    margin-bottom: 70px;
+}
 .two-column {
     display: inherit;
-    margin-bottom: 50px;
     
-    article {
+    .project-item {
         width: 100%;
         overflow: hidden;
         position: relative;
         -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
         box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
-        
-        &:first-child {
-            margin-right: 50px;
-        }
 
+        margin-right: 50px;
         img {
             width: 100%;
             top: 0;
