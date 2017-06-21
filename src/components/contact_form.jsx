@@ -20,10 +20,10 @@ class ContactForm extends React.Component{
         </div>
         
         <div className="group">
-          <textarea name="message" id="msg"></textarea>
+          <textarea name="message" id="msg" required></textarea>
           <span className="highlight"></span>
           <span className="bar"></span>
-          <label htmlFor="msg" required>Message</label>
+          <label htmlFor="msg">Message</label>
         </div>
         <button type="submit">Send</button>
     </form>);

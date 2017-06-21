@@ -13,23 +13,28 @@ class Contact extends React.Component{
       <div>
         <h2>Say hi</h2>
         <section className="contact container">
-          <div className="logo">
-            <i className="fa fa-envelope"></i>
-          </div>
-          
-          <div className="logo">
-            <i className="fa fa-github-alt"></i>
-          </div>
-          
-          <div className="logo">
-            <i className="fa fa-linkedin"></i>
-          </div>
-          
-          <div className="logo">
-            <i className="fa fa-facebook"></i>
-          </div>
-
           <ContactForm />
+          <div className="logos flexbox">
+            <div className="logo">
+              <i className="fa fa-envelope"></i>
+            </div>
+            
+            <div className="logo">
+              <i className="fa fa-github-alt"></i>
+            </div>
+            
+            <div className="logo">
+              <i className="fa fa-linkedin"></i>
+            </div>
+            
+            <div className="logo">
+              <i className="fa fa-facebook"></i>
+            </div>
+
+            <div className="logo">
+              <i className="fa fa-phone"></i>
+            </div>
+          </div>
         </section>
       </div>
     );
