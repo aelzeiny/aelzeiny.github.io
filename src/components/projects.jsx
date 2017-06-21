@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectItem from './project-item';
 
 require('../styles/projects.scss');
 
@@ -8,20 +9,20 @@ export default function Projects(props) {
             <h2 data-aos="fade-up">PROJECTS</h2>
             <div className="container flexbox" id="projects">
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
+                    <ProjectItem aos="zoom-in-left"/>
+                    <ProjectItem aos="zoom-in-right"/>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
+                    <ProjectItem aos="zoom-in-left"/>
+                    <ProjectItem aos="zoom-in-right"/>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
+                    <ProjectItem aos="zoom-in-left"/>
+                    <ProjectItem aos="zoom-in-right"/>
                 </div>
                 <div className="two-column">
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-left"></img>
-                <img src="https://unsplash.it/500/500/?random" data-aos="zoom-in-right"></img>
+                    <ProjectItem aos="zoom-in-left"/>
+                    <ProjectItem aos="zoom-in-right"/>
                 </div>
             </div>
         </section>

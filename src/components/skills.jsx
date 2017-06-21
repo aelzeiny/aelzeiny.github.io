@@ -27,6 +27,10 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/csharp.svg'
             },
             {
+                cat: 'frontend', name: 'D3.js', value: 4,
+                icon: '/assets/coding_icons/d3.png'
+            },
+            {
                 cat: 'backend', name: 'Git', value: 4,
                 icon: '/assets/coding_icons/git.png'
             },
