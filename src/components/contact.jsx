@@ -24,7 +24,7 @@ class Contact extends React.Component{
       <div>
         <h2>Say hi</h2>
         <h3>to {this.state.active}</h3>
-        <section className="contact container">
+        <section className="contact container" data-aos="zoom-in-up">
           <ContactForm />
           <div className="logos flexbox">
             <a className="logo" onMouseOver={this.iconHover} data-active="ahmed.elzeiny@gmail.com">
