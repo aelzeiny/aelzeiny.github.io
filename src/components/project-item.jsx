@@ -9,8 +9,10 @@ class ProjectItem extends React.Component{
     return (
       <article data-aos={this.props.aos}>
         <img src="https://unsplash.it/500/500/?random"></img>
-        <div className="overlay">
-          
+        <div className="ovrly"></div>
+        <div className="buttons">
+            <a href="#" className="fa fa-link"></a>
+            <a href="#" className="fa fa-search"></a>
         </div>
       </article>
     );
