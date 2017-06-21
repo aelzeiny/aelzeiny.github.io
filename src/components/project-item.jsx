@@ -8,7 +8,7 @@ class ProjectItem extends React.Component{
   render() {
     return (
       <article data-aos={this.props.aos}>
-        <h4>HELLO</h4>
+        <h4>{this.props.title}</h4>
         <div className="project-item">
           <a href="#">
             <img src="https://unsplash.it/500/500/?random"></img>
