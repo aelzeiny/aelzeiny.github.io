@@ -1,5 +1,5 @@
+@import 'colors';
 section.contact {
-  width: 100%;
   .logo {
     font-size: 5em;
     display: inline-block;
@@ -10,100 +10,148 @@ section.contact {
     min-width: 75px;
   }
 
-  * { box-sizing:border-box; }
+  form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
 
-  /* form starting stylings ------------------------------- */
-  .group 			  {
-    position:relative;
-    margin-bottom:45px;
-    input 				{
-      font-size:18px;
-      padding:10px 10px 10px 5px;
-      display:block;
-      width:300px;
-      border:none;
-      border-bottom:1px solid #757575;
+    * { box-sizing:border-box; }
+
+    /* form starting stylings ------------------------------- */
+    .group 			  {
+      position:relative;
+      margin-bottom:45px;
+      textarea {
+        height: 300px;
+      }
+      input, textarea	{
+        color: $eccentric;
+        font-size:18px;
+        padding:10px 10px 10px 5px;
+        display:block;
+        width:100%;
+        border:none;
+        border-bottom:1px solid #757575;
+        background-color: transparent;
+      }
+      input:focus, textarea:focus { 
+        outline: none;
+      }
+
+      /* LABEL ======================================= */
+      label 				 {
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:10px;
+        transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -webkit-transition:0.2s ease all;
+      }
+
+      /* active state */
+      input:focus ~ label, input:valid ~ label,
+      textarea:focus ~ label, textarea:valid ~ label {
+        top:-20px;
+        font-size:14px;
+        color:$eccentric;
+      }
+
+      /* BOTTOM BARS ================================= */
+      .bar 	{ position:relative; display:block; width:100%; }
+      .bar:before, .bar:after 	{
+        content:'';
+        height:2px;
+        width:0;
+        bottom:1px;
+        position:absolute;
+        background:$eccentric;
+        transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -webkit-transition:0.2s ease all;
+      }
+      .bar:before {
+        left:50%;
+      }
+      .bar:after {
+        right:50%;
+      }
+
+      /* active state */
+      input:focus ~ .bar:before, input:focus ~ .bar:after,
+      textarea:focus ~.bar:before, textarea:focus ~.bar:after {
+        width:50%;
+      }
+
+      /* HIGHLIGHTER ================================== */
+      .highlight {
+        position:absolute;
+        height:60%;
+        width:100px;
+        top:25%;
+        left:0;
+        pointer-events:none;
+        opacity:0.5;
+      }
+
+      /* active state */
+      input:focus ~ .highlight, textarea:focus ~ .highlight {
+        -webkit-animation:inputHighlighter 0.3s ease;
+        -moz-animation:inputHighlighter 0.3s ease;
+        animation:inputHighlighter 0.3s ease;
+      }
+    }
+
+
+    /* ANIMATIONS ================ */
+    @-webkit-keyframes inputHighlighter {
+      from { background:$eccentric; }
+      to 	{ width:0; background:transparent; }
+    }
+    @-moz-keyframes inputHighlighter {
+      from { background:$eccentric; }
+      to 	{ width:0; background:transparent; }
+    }
+    @keyframes inputHighlighter {
+      from { background:$eccentric; }
+      to 	{ width:0; background:transparent; }
+    }
+    
+    button {
+      margin-bottom: 20px;
+      text-transform: none;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 2.5em;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      padding: .3rem 1rem;
+      font-size: 1rem;
+      border-radius: .25rem;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      color: $eccentric;
       background-color: transparent;
+      border-color: $eccentric;
+      -webkit-appearance: button;
+      width: 100%;
     }
-    input:focus 		{ outline:none; }
-
-    /* LABEL ======================================= */
-    label 				 {
-      color:#999;
-      font-size:18px;
-      font-weight:normal;
-      position:absolute;
-      pointer-events:none;
-      left:5px;
-      top:10px;
-      transition:0.2s ease all;
-      -moz-transition:0.2s ease all;
-      -webkit-transition:0.2s ease all;
+    /* custom button hover effects */
+    button:hover {
+      background-color: $eccentric;
+      color: white;
     }
-
-    /* active state */
-    input:focus ~ label, input:valid ~ label 		{
-      top:-20px;
-      font-size:14px;
-      color:white;
-    }
-
-    /* BOTTOM BARS ================================= */
-    .bar 	{ position:relative; display:block; width:300px; }
-    .bar:before, .bar:after 	{
-      content:'';
-      height:2px;
-      width:0;
-      bottom:1px;
-      position:absolute;
-      background:white;
-      transition:0.2s ease all;
-      -moz-transition:0.2s ease all;
-      -webkit-transition:0.2s ease all;
-    }
-    .bar:before {
-      left:50%;
-    }
-    .bar:after {
-      right:50%;
-    }
-
-    /* active state */
-    input:focus ~ .bar:before, input:focus ~ .bar:after {
-      width:50%;
-    }
-
-    /* HIGHLIGHTER ================================== */
-    .highlight {
-      position:absolute;
-      height:60%;
-      width:100px;
-      top:25%;
-      left:0;
-      pointer-events:none;
-      opacity:0.5;
-    }
-
-    /* active state */
-    input:focus ~ .highlight {
-      -webkit-animation:inputHighlighter 0.3s ease;
-      -moz-animation:inputHighlighter 0.3s ease;
-      animation:inputHighlighter 0.3s ease;
-    }
-  }
-
-
-  /* ANIMATIONS ================ */
-  @-webkit-keyframes inputHighlighter {
-    from { background:white; }
-    to 	{ width:0; background:transparent; }
-  }
-  @-moz-keyframes inputHighlighter {
-    from { background:white; }
-    to 	{ width:0; background:transparent; }
-  }
-  @keyframes inputHighlighter {
-    from { background:white; }
-    to 	{ width:0; background:transparent; }
   }
 }

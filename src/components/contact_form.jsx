@@ -18,6 +18,13 @@ class ContactForm extends React.Component{
           <span className="bar"></span>
           <label htmlFor="email">Email</label>
         </div>
+        
+        <div className="group">
+          <textarea name="message" id="msg"></textarea>
+          <span className="highlight"></span>
+          <span className="bar"></span>
+          <label htmlFor="msg" required>Message</label>
+        </div>
         <button type="submit">Send</button>
     </form>);
   }
