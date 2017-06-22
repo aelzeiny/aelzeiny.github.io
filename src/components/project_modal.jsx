@@ -7,6 +7,9 @@ class ProjectModal extends React.Component {
   constructor(props) {
     super(props);
     this._initData();
+    this.state = {
+      data: null
+    };
     this.closeModal = this.closeModal.bind(this);
     this.maximizeModal = this.maximizeModal.bind(this);
     this.minimizeModal = this.minimizeModal.bind(this);
@@ -15,6 +18,11 @@ class ProjectModal extends React.Component {
   componentDidMount() {
     if (this.props.match.params.projectName) {
       window.setTimeout(() => {
+      const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
+      this.setState({data: data});
+      this.video.play();
+      this.video.playbackRate = 2.0;
+      this.maximizeModal();
         this.maximizeModal();
       }, 1);
     }
@@ -27,34 +35,49 @@ class ProjectModal extends React.Component {
     }, TIMEOUT);
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.match.params.projectName) {
-      const data = this.projects.find((el) => newProps.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
-      this.maximizeModal();
-    }
-  }
-
   minimizeModal() {
-    console.log("closing...");
     this.section.setAttribute("class", "modal");
   }
 
   maximizeModal() {
-    console.log("opening");
     this.section.setAttribute("class", "modal active");
   }
 
   render() {
     return (
       <section ref={(el) => this.section = el} className="modal">
-        <h1>{this.props.match.params.projectName}</h1>
-        <button onClick={this.closeModal}>HELLO</button>
+        {this.renderProject()}
+        <button onClick={this.closeModal}>
+          <i className="fa fa-times"></i>
+        </button>
       </section>
     );
   }
 
-  _initData() {
-    
+  renderProject() {
+    if(!this.state.data)
+      return null;
+    const data = this.state.data;
+    return (
+      <div className="modal-proj">
+        <h1>{data.name}</h1>
+        <a target="_blank" href={data.github}><i className="fa fa-github"></i></a>
+        {this.renderLive()}
+        <video ref={el => this.video = el} width="25%" height="50%" autoPlay muted>
+          <source src={`assets/projects/${data.source}`} type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    );
+  }
+
+  renderLive() {
+    if(this.state.data.live)
+      return <a target="_blank" href={this.state.data.live}>LIVE</a>
+    return null;
+  }
+
+  _initData() {   
     this.projects = [
       {
         name: 'Cloud Casts',
@@ -159,7 +182,7 @@ class ProjectModal extends React.Component {
         tech: [
           "csharp"
         ]
-      },
+      }
     ];
   }
 }
