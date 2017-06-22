@@ -6,8 +6,8 @@
   left: 0;
   z-index: 20;
   background-color: white;
-  -webkit-transition: top 1s; /* Safari */
-  transition: top 1s;
+  -webkit-transition: top .5s; /* Safari */
+  transition: top .5s;
 
   &.active {
     top: 0;

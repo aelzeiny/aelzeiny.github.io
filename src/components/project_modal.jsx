@@ -6,9 +6,7 @@ const TIMEOUT = 550;
 class ProjectModal extends React.Component {
   constructor(props) {
     super(props);
-    this.data = {
-
-    };
+    this._initData();
     this.closeModal = this.closeModal.bind(this);
     this.maximizeModal = this.maximizeModal.bind(this);
     this.minimizeModal = this.minimizeModal.bind(this);
@@ -33,8 +31,10 @@ class ProjectModal extends React.Component {
 
   componentWillReceiveProps(newProps) {
     console.log("PROPS: ", this.props.match.params.projectName, newProps.match.params.projectName);
-    if (newProps.match.params.projectName)
+    if (newProps.match.params.projectName) {
+      const data = this.projects.find((el) => newProps.match.params.projectName.indexOf(el.search) >= 0);
       this.maximizeModal();
+    }
   }
 
   minimizeModal() {
@@ -54,6 +54,26 @@ class ProjectModal extends React.Component {
         <button onClick={this.closeModal}>HELLO</button>
       </section>
     );
+  }
+
+  _initData() {
+    
+    this.projects = [
+      {
+        name: 'Cloud Casts',
+        search: '',
+        image: 'cloudcasts.gif',
+        description: '',
+        github: '',
+        live: '',
+        features: [
+          
+        ],
+        tech: [
+
+        ]
+      }
+    ];
   }
 }
 
