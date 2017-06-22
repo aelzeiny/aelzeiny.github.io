@@ -13,7 +13,6 @@ class ProjectModal extends React.Component {
   }
   
   componentDidMount() {
-    console.log("MOUNTED: ", this.props.match.params.projectName);
     if (this.props.match.params.projectName) {
       window.setTimeout(() => {
         this.maximizeModal();
@@ -24,13 +23,11 @@ class ProjectModal extends React.Component {
   closeModal() {
     this.minimizeModal();
     window.setTimeout(() => {
-      console.log("closed");
       window.location.href = '#/';
     }, TIMEOUT);
   }
 
   componentWillReceiveProps(newProps) {
-    console.log("PROPS: ", this.props.match.params.projectName, newProps.match.params.projectName);
     if (newProps.match.params.projectName) {
       const data = this.projects.find((el) => newProps.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
       this.maximizeModal();
@@ -138,6 +135,29 @@ class ProjectModal extends React.Component {
           "javascript",
           "html5",
           "css3"
+        ]
+      },
+      {
+        name: 'Canoe Analyzer, Simulator, and Tester (CAST)',
+        search: 'cast2000',
+        source: 'Cast2000.mp4',
+        description: (
+          "Even as San Jose State's Structural Analysis lead for the Mid-Pacific Regional Concrete Canoe Competition, I wrote software to " +
+          "solve Civil Engineering Problems. The goal of this competition is to build a fast, lightweight, and boyant canoe out of concrete" +
+          "However, concrete is a very brittle material, and a canoe that sinks can never win a race. This program generates " +
+          " a comprehensive structural calculation report; complete with maximum tensile, compressive, and shear stresses exerted on the hull during an intense race." 
+        ),
+        github: '',
+        live: null,
+        features: [
+          "3D Point Cloud Triangulation to generate a mesh of the Hull.",
+          "Text or AutoCAD DXF format imports, and excel sheet exports.",
+          "Scalable Model-View-ViewModel Design",
+          "Learned WPF for UI, and HelixToolkit for 3D rendering",
+          "#JustCivilThings: Load Cases, Mohr's Circle, First & Second Moment Areas, Hydraulic Loads, Critical Cross-Sections, etc."
+        ],
+        tech: [
+          "csharp"
         ]
       },
     ];
