@@ -89,6 +89,32 @@ class ProjectModal extends React.Component {
           "sass",
           "webpack"
         ]
+      },
+      {
+        name: 'Subdivisionary',
+        search: 'subdivisionary',
+        source: 'Subdivisionary.mp4',
+        description: (
+          "CloudCasts is a podcast streaming app featuring original UI and mobile-responsive design. " +
+          "This app pull from a variety of podcast directories (including ITunes) and RSS feeds to sort podcasts based on popularity. " +
+          "Listen to any and every podcast on the web, all from a single source."
+        ),
+        github: 'https://github.com/aelzeiny/Subdivisionary',
+        live: 'ccsfsubdivision.azurewebsites.net',
+        features: [
+          "Digitized 8 applications and consolidated over 64 forms for 3 city departments",
+          "Ability to create, submit, and track applications",
+          "Implemented payments through the City and County of SF's payment gateways",
+          "Hand-rolled electronic signatures in legal accordance with UETA and ESIGN acts",
+          "File uploads are handled asynchronously. Made for both Google Drive and Azure Blob file-hosting services."
+        ],
+        tech: [
+          "javascript",
+          "csharp",
+          "asp-net",
+          "bootstrap",
+          "azure"
+        ]
       }
     ];
   }
