@@ -18,7 +18,7 @@ export default function Projects(props) {
                 </div>
                 <div className="two-column">
                     <ProjectItem title="Data-Structures in 1000 Words" aos="zoom-in-left"/>
-                    <ProjectItem title="CAST2000 - Canoe Hull Structural Analysis" aos="zoom-in-right"/>
+                    <ProjectItem title="CAST2000 - Canoe Hull Structural Analyzer" aos="zoom-in-right"/>
                 </div>
             </div>
         </section>
