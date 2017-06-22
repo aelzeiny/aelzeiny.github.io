@@ -115,7 +115,31 @@ class ProjectModal extends React.Component {
           "bootstrap",
           "azure"
         ]
-      }
+      },
+      {
+        name: 'Build-A-Mesh',
+        search: 'build-a-mesh',
+        source: 'build a mesh.mp4',
+        description: (
+          "Pathfinding algorithms are always visualized on square grids, but maps in the real-world can rarely ever be represented by" + 
+          "neat, orthogonal corners. There are a few different ways to construct a navigation-mesh. This project demonstrates the " + 
+          "pre-computational method that became popular in point-and-click adventure games in the late 90s, and continues to be popular in major development studios today"
+        ),
+        github: 'https://github.com/aelzeiny/Build-A-Mesh-Workshop',
+        live: 'http://www.elzeiny.io/Build-A-Mesh-Workshop/',
+        features: [
+          "Cellular Automata Algorithm for procedural level generation",
+          "Concave Polygon Rasterization Algorithm to convert square-grids to polygons",
+          "Polygon addition and subtraction algorithms to edit levels",
+          "Polygon mesh generation using uni-directional graphs, visualized in a nifty animation",
+          "A*-Pathfinding algorithm to find shortest paths on the pre-computed graph"
+        ],
+        tech: [
+          "javascript",
+          "html5",
+          "css3"
+        ]
+      },
     ];
   }
 }
