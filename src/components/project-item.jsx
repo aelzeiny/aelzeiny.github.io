@@ -1,7 +1,5 @@
 import React from 'react';
-// import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-// browserHistory.push('/some/path');
 class ProjectItem extends React.Component{
   constructor(props) { 
     super(props);
