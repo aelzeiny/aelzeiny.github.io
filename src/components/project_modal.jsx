@@ -46,10 +46,10 @@ class ProjectModal extends React.Component {
   render() {
     return (
       <section ref={(el) => this.section = el} className="modal">
-        {this.renderProject()}
         <button onClick={this.closeModal}>
           <i className="fa fa-times"></i>
         </button>
+        {this.renderProject()}
       </section>
     );
   }
