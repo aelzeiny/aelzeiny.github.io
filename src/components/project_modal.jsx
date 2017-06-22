@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 require('../styles/modal.scss');
 
-const TIMEOUT = 500;
+const TIMEOUT = 550;
 class ProjectModal extends React.Component {
   constructor(props) {
     super(props);
@@ -16,13 +16,17 @@ class ProjectModal extends React.Component {
   
   componentDidMount() {
     console.log("MOUNTED: ", this.props.match.params.projectName);
-    if (this.props.match.params.projectName)
-      this.maximizeModal();
+    if (this.props.match.params.projectName) {
+      window.setTimeout(() => {
+        this.maximizeModal();
+      }, 1);
+    }
   }
 
   closeModal() {
-    this.maximizeModal();
+    this.minimizeModal();
     window.setTimeout(() => {
+      console.log("closed");
       window.location.href = '#/';
     }, TIMEOUT);
   }
@@ -34,7 +38,7 @@ class ProjectModal extends React.Component {
   }
 
   minimizeModal() {
-    console.log("closing");
+    console.log("closing...");
     this.section.setAttribute("class", "modal");
   }
 
