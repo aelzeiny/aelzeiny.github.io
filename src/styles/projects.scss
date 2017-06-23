@@ -9,15 +9,93 @@
 .flexbox-container > .two-column {
 	width: 50%;
 	padding: 10px;
+    &:first-child {
+        margin-right: 20px;
+    }
 }
-
-.flexbox-container > .two-column:first-child {
-	margin-right: 20px;
+article {
+    margin-right: 50px;
+    margin-bottom: 70px;
 }
 .two-column {
     display: inherit;
-    margin-bottom: 50px;
-}
-.two-column img:first-child {
-    margin-right: 50px;
+    
+    .project-item {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+
+        margin-right: 50px;
+        img {
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .ovrly {
+            background: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        .buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .buttons .fa {
+            background: rgb(256, 256, 256);
+            -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 40px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            position: relative;
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+            -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+            -o-transition: -o-transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
+            color: transparent;
+        }
+        &:hover .buttons .fa {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            color: rgba(50, 50, 50, 0.9);
+        }
+        &:hover .ovrly {
+            opacity: 1;
+        }
+    }
 }
