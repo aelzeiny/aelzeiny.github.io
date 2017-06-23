@@ -76,10 +76,17 @@ class ProjectModal extends React.Component {
               ))}
             </ul>
           </div>
-          <video ref={el => this.video = el} autoPlay muted loop>
-            <source src={`assets/projects/${data.source}`} type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
+          
+          <div className="modal-tech">
+            <video ref={el => this.video = el} autoPlay muted loop>
+              <source src={`assets/projects/${data.source}`} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+            <br/>
+            {data.tech.map(tech => (
+              <i key={"tech-" + tech} className={`devicon-${tech}-plain`}></i>
+            ))}
+          </div>
         </div>
       </div>
     );

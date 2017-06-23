@@ -1,21 +1,23 @@
 .modal {
   position: fixed;
-  overflow-y: scroll;
   display: block;
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  top: -100vh;
+  top: 0;
   left: 0;
   z-index: 20;
   background-color: rgba(0,0,0,0.56);
-  -webkit-transition: top .5s; /* Safari */
-  transition: top .5s;
+  -webkit-transition: opacity .5s; /* Safari */
+  transition: opacity .5s;
+  opacity: 0;
   padding: 50px;
   box-sizing: border-box;
 
   &.active {
     top: 0;
+    opacity: 1;
+    overflow-y: scroll;
   }
 
   button {
@@ -47,6 +49,12 @@
         margin-left: 25px;
         font-size: .8em;
       }
+    }
+
+    .modal-tech {
+      display: block;
+      font-size: 4em;
+      text-align: center;
     }
     
     video {
