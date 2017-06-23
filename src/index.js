@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function checkSmoothScroll() {
+	let platform = navigator.platform.toLowerCase();
 	if ((platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1) && $.browser.webkit)
 	{
     $.srSmoothscroll({
