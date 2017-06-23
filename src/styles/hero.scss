@@ -1,0 +1,76 @@
+
+figcaption {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+figcaption .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+figcaption .layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+figcaption .parallax {
+  position: fixed;
+  text-align: center;
+}
+
+#base {
+  opacity: 0;
+  background-image: url(../../assets/SF.svg);
+}
+#layer-0 {
+  background-image: url(../../assets/Layer0.svg);
+}
+#layer-1 {
+  background-image: url(../../assets/Layer1.svg);
+}
+#layer-2 {
+  background-image: url(../../assets/Layer2.svg);
+}
+#layer-3 {
+  background-image: url(../../assets/Layer3.svg);
+}
+#layer-4 {
+  background-image: url(../../assets/Layer4.svg);
+}
+#layer-5 {
+  background-image: url(../../assets/Layer5.svg);
+}
+#layer-4-5 {
+  background-image: url(../../assets/Layer5.5.svg);
+}
+#layer-6 {
+  background-image: url(../../assets/Layer6.svg);
+}
+
+
+/*.modal::after {*/
+.modal {
+  /*content: "";*/
+  background: url('../../assets/dark-triangles.png');
+  background-repeat: repeat;
+  /*opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   */
+}

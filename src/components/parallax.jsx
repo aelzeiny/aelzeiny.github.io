@@ -1,52 +1,45 @@
 import React from 'react';
+
+require('../styles/hero.scss');
+
 class Parallax extends React.Component {
     constructor(props) {
         super(props);
         this.scroll = this.scroll.bind(this);
     }
-
-    componentDidMount() {
-        this.layers = document.querySelectorAll(".parallax");
-        this.velo = new Array(this.layers.length);
-        for(let i = 0;i < this.layers.length; i++) {
-            let veloStr = this.layers[i].getAttribute("data-parallax-ratio");
-            this.velo[i] = parseInt(veloStr);
-        }
-        window.addEventListener("scroll", this.scroll);
-        let interval;
-        window.addEventListener("ontouchstart", interval = window.setInterval(this.scroll, 20));
-        window.addEventListener("ontouchend", window.clearInterval(interval));
-    }
-    
-    scroll(e) {
-        this.update(window.pageYOffset);
-    }
-
-    update(scrollY) {
-        for(let i=0;i<this.layers.length;i++) {
-            const velo = this.velo[i];
-            const layer = this.layers[i];
-            layer.setAttribute("style", `transform: translateY(${-(scrollY * velo / 100)}px)`);
-        }
-    }
     
     render() {
         return (
             <figcaption>
-                <div className="layer parallax" id="layer-0" data-parallax-ratio="3"></div>
+                <div className="layer parallax" id="layer-0" data-parallax-ratio="3">
+                    <img src="../../assets/Layer0.svg"></img>
+                </div>
                 <div className="layer parallax" data-parallax-ratio="3">
                     <h1>Ahmed Elzeiny</h1>
                     <h2>Software Engineer</h2>
                     <p className="cursive">In the bay area</p>
                 </div>
-                <div className="layer parallax" id="layer-1" data-parallax-ratio="29"></div>
-                <div className="layer parallax" id="layer-2" data-parallax-ratio="30"></div>
-                <div className="layer parallax" id="layer-3" data-parallax-ratio="40"></div>
-                <div className="layer parallax" id="layer-4" data-parallax-ratio="45"></div>
-                <div className="layer parallax" id="layer-4-5" data-parallax-ratio="55"></div> 
-                <div className="layer parallax" id="layer-5" data-parallax-ratio="70"></div>
-                <div className="layer" id="layer-6"></div>
-                {/*<div className="layer" id="base"></div>*/}
+                <div className="layer parallax" id="layer-1" data-parallax-ratio="29">
+                    <img src="../../assets/Layer1.svg"></img>
+                </div>
+                <div className="layer parallax" id="layer-2" data-parallax-ratio="30">
+                    <img src="../../assets/Layer2.svg"></img>
+                </div>
+                <div className="layer parallax" id="layer-3" data-parallax-ratio="40">
+                    <img src="../../assets/Layer3.svg"></img>
+                </div>
+                <div className="layer parallax" id="layer-4" data-parallax-ratio="45">
+                    <img src="../../assets/Layer4.svg"></img>
+                </div>
+                <div className="layer parallax" id="layer-4-5" data-parallax-ratio="55">
+                    <img src="../../assets/Layer5.5.svg"></img>
+                </div> 
+                <div className="layer parallax" id="layer-5" data-parallax-ratio="70">
+                    <img src="../../assets/Layer5.svg"></img>
+                </div>
+                <div className="layer" id="layer-6">
+                    <img src="../../assets/Layer6.svg"></img>
+                </div>
             </figcaption>
         );
     }
