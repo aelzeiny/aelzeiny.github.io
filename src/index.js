@@ -9,11 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // init animate on scroll
   AOS.init();
   // init smooth scrolling
-  // $.srSmoothscroll({
-  //   step: 90,
-  //   speed: 300,
-  //   ease: 'linear'
-  // });
+  checkSmoothScroll();
   const RoutedApp = (props) => {
     return (
       <HashRouter>
@@ -24,3 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const root = document.getElementById("root");
   ReactDOM.render(<RoutedApp/>, root);
 });
+
+function checkSmoothScroll() {
+	if ((platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1) && $.browser.webkit)
+	{
+    $.srSmoothscroll({
+      step: 90,
+      speed: 300,
+      ease: 'linear'
+    });
+	}
+}
