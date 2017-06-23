@@ -12,13 +12,13 @@ require('../styles/application.scss');
 export default function App(props) {
     return (
         <div>
-            <Route path="/projects/:projectName" component={ProjectModal} />
             <Parallax/>
             <main>
                 <About />
                 <Projects />
                 <Skills />
                 <Contact />
+                <Route path="/projects/:projectName" component={ProjectModal} />
             </main>
         </div>
     );

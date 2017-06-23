@@ -41,6 +41,7 @@ class ProjectModal extends React.Component {
 
   maximizeModal() {
     this.section.setAttribute("class", "modal active");
+    document.body.setAttribute("style", "overflow: hidden");
   }
 
   render() {
@@ -61,12 +62,24 @@ class ProjectModal extends React.Component {
     return (
       <div className="modal-proj">
         <h1>{data.name}</h1>
-        <a target="_blank" href={data.github}><i className="fa fa-github"></i></a>
-        {this.renderLive()}
-        <video ref={el => this.video = el} width="25%" height="50%" autoPlay muted>
-          <source src={`assets/projects/${data.source}`} type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video>
+        <div className="modal-content flexbox">
+          <div className="modal-sidebar">
+            <div className="modal-icons">
+              <a target="_blank" href={data.github}><i className="fa fa-github"></i></a>
+              {this.renderLive()}
+            </div>
+            <p>{data.description}</p>
+            <ul>
+              {data.features.map((feature, idx) => (
+                <li key={"feature-" + idx}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <video ref={el => this.video = el} autoPlay muted loop>
+            <source src={`assets/projects/${data.source}`} type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     );
   }
