@@ -37,6 +37,7 @@ class ProjectModal extends React.Component {
 
   minimizeModal() {
     this.section.setAttribute("class", "modal");
+    document.body.removeAttribute("style");
   }
 
   maximizeModal() {
