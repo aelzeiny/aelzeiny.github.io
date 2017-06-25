@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // init animate on scroll
   AOS.init();
   // init smooth scrolling
-  checkSmoothScroll();
+  // checkSmoothScroll();
   const RoutedApp = (props) => {
     return (
       <HashRouter>

@@ -19,6 +19,7 @@ class Parallax extends React.Component {
     }
     
     scroll(e) {
+        console.log(e);
         this.update(window.pageYOffset);
     }
 

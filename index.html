@@ -17,9 +17,24 @@
         color: inherit;
         background: transparent;
       }
+      
+      i#loading-spinner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 100px;
+      }
+
+      #loading-title {
+        visibility: hidden;
+      }
       /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
       includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
-      html, body { height: 100%; }
+      html, body {
+        height: 100%;
+        background-color: #1b0a35;
+        color: #afa9d3;
+      }
 
       /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
       otherwise there is a phantom div on the right side of the screen (from the left:50vw),
@@ -64,15 +79,15 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"></link>
     <link rel="stylesheet" type="text/css" href="src/styles/hero.css"></link>
 
-    <script src="src\jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="src\jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="src\jquery-migrate-1.2.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="src\jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="src\jquery.simplr.smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src\jquery.simplr.smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>-->
   </head>
   <body>
     <div id="root">
-      <i class="fa fa-spin fa-6 fa-spinner" style="font-size: 100px"></i>
-      <h1>Ahmed Elzeiny Portfolio</h1>
+      <i class="fa fa-spin fa-6 fa-circle-o-notch" id="loading-spinner" style="position: absolute; left: 50%; top: 50%;"></i>
+      <h1 id="loading-title">Ahmed Elzeiny Portfolio</h1>
     </div>
     <!-- single page app in bundle.js -->
     <script src="/build/bundle.js"></script>
