@@ -88,7 +88,6 @@ class Skills extends React.Component {
         // this.buildSkills(data);
         const checkScroll = () => {
             let dx = window.pageYOffset + window.innerHeight * .7 ;
-            console.log(dx, bounds.top);
             if(dx > bounds.top) {
                 window.removeEventListener("scroll", checkScroll);
                 this.buildSkills(data);
@@ -96,7 +95,6 @@ class Skills extends React.Component {
         }
         window.addEventListener("scroll", checkScroll);
         this.svg.addEventListener("mouseleave", e => {
-            console.log(e.currentTarget);
             this.setState({
                 category: 'none',
                 name: "",
