@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(<RoutedApp/>, root);
 });
 
-function checkSmoothScroll() {
-	let platform = navigator.platform.toLowerCase();
-	if ((platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1) && $.browser.webkit)
-	{
-    $.srSmoothscroll({
-      step: 90,
-      speed: 300,
-      ease: 'linear'
-    });
-	}
-}
+// function checkSmoothScroll() {
+// 	let platform = navigator.platform.toLowerCase();
+// 	if ((platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1) && $.browser.webkit)
+// 	{
+//     $.srSmoothscroll({
+//       step: 90,
+//       speed: 300,
+//       ease: 'linear'
+//     });
+// 	}
+// }

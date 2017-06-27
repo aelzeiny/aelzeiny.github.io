@@ -87,7 +87,7 @@ class Skills extends React.Component {
         const bounds = this.svg.getBoundingClientRect();
         // this.buildSkills(data);
         const checkScroll = () => {
-            if(window.pageYOffset > bounds.top + screen.height * 1.2) {
+            if(window.pageYOffset > bounds.top + screen.height * .5) {
                 window.removeEventListener("scroll", checkScroll);
                 this.buildSkills(data);
             }
