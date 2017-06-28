@@ -69,7 +69,7 @@ class ResumeModal extends ModalComponent {
                 <section className="borderless">
                   <h2>SKILLS</h2>
                   <h3>FRONT-END</h3>
-                  <ul className="skills">
+                  <ul className="resume-skills">
                     <li><p>React </p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>Redux</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>Vue</p><div className="star-ranking"><div className="star-4-5">★★★★★</div></div></li>
@@ -80,21 +80,21 @@ class ResumeModal extends ModalComponent {
                     <li><p>D3</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
                   </ul>
                   <h3>BACK-END</h3>
-                  <ul className="skills">
+                  <ul className="resume-skills">
                     <li><p>Ruby on Rails</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>PostgreSQL</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
                     <li><p>NodeJS</p><div className="star-ranking"><div className="star-3-5">★★★★★</div></div></li>
                     <li><p>ASP.NET</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                   </ul>
                   <h3>Tooling</h3>
-                  <ul className="skills">
+                  <ul className="resume-skills">
                     <li><p>Heroku</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>AWS</p><div className="star-ranking"><div className="star-3-5">★★★★★</div></div></li>
                     <li><p>Webpack</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
                     <li><p>Git</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                   </ul>
                   <h3>Languages</h3>
-                  <ul className="skills">
+                  <ul className="resume-skills">
                     <li><p>C#</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>Ruby</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
                     <li><p>JavaScript</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
