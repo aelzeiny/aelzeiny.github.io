@@ -7,11 +7,20 @@ class ProjectModal extends ModalComponent {
     super(props);
   }
   
+  componentDidMount() {
+    if (this.props.match.params.projectName) {
+      window.setTimeout(() => {
+        this.onMount();
+        this.maximizeModal();
+      }, 1);
+    }
+  }
+  
   onMount() {
     const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
     this.setState({data: data});
-    this.video.play();
     this.video.playbackRate = 2.0;
+    this.video.play();
   }
 
   renderModal() {

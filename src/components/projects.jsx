@@ -18,8 +18,8 @@ export default function Projects(props) {
                 </div>
                 <div className="two-column">
                     {/*<ProjectItem title="Data-Structures in 1000 Words" aos="zoom-in-left"/>*/}
-                    <ProjectItem title="Resume" img="" aos="zoom-in-left"/>
-                    <ProjectItem title="Synapsis - Machine Learning Visualization" img="Synapsis.png" aos="zoom-in-left"/>
+                    <ProjectItem title="Resume" img="Resume.PNG" aos="zoom-in-left"/>
+                    <ProjectItem title="Synapsis - Machine Learning Visualization" img="Synapsis.png" aos="zoom-in-right"/>
                 </div>
             </div>
         </section>

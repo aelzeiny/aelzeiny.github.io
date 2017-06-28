@@ -11,14 +11,12 @@ class ModalComponent extends React.Component {
     this.minimizeModal = this.minimizeModal.bind(this);
     this._init();
   }
-  
+
   componentDidMount() {
-    if (this.props.match.params.projectName) {
-      window.setTimeout(() => {
-        this.onMount();
-        this.maximizeModal();
-      }, 1);
-    }
+    window.setTimeout(() => {
+      this.onMount();
+      this.maximizeModal();
+    }, 1);
   }
 
   closeModal() {
@@ -34,6 +32,7 @@ class ModalComponent extends React.Component {
   }
 
   maximizeModal() {
+    console.log("MODAL OPEN");
     this.section.setAttribute("class", "modal active");
     document.body.setAttribute("style", "overflow: hidden");
   }

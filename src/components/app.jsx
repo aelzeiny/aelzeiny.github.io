@@ -7,7 +7,7 @@ import Skills from './skills';
 import ResumeModal from './resume_modal';
 import ProjectModal from './project_modal';
 
-import { Route, Switch, Link, HashRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 require('../styles/application.scss');
 
@@ -23,7 +23,7 @@ export default function App(props) {
                 <Switch>
                     <Route path="/projects/Resume" component={ResumeModal} />
                     <Route path="/projects/:projectName" component={ProjectModal} />
-                <Switch>
+                </Switch>
             </main>
         </div>
     );
