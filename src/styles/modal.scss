@@ -5,18 +5,18 @@
   height: 100%;
   min-height: 100vh;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 20;
   background-color: rgba(0,0,0,0.56);
-  -webkit-transition: opacity .5s; /* Safari */
-  transition: opacity .5s;
+  -webkit-transition: all .5s ease-in-out; /* Safari */
+  transition: all .5s;
   opacity: 0;
   padding: 50px;
   box-sizing: border-box;
 
   &.active {
-    top: 0;
     opacity: 1;
+    left: 0;
     overflow-y: scroll;
   }
 
