@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-require('../styles/modal.scss');
+require('../styles/modal_component.scss');
+
 
 const TIMEOUT = 550;
-class ProjectModal extends React.Component {
+class ModalComponent extends React.Component {
   constructor(props) {
     super(props);
     this.closeModal = this.closeModal.bind(this);
@@ -50,10 +50,6 @@ class ProjectModal extends React.Component {
   }
 
   onMount() {
-    const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
-    this.setState({data: data});
-    this.video.play();
-    this.video.playbackRate = 2.0;
   }
 
   renderModal() {
@@ -63,4 +59,4 @@ class ProjectModal extends React.Component {
   }
 }
 
-export default ProjectModal;
+export default ModalComponent;

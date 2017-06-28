@@ -1,58 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-require('../styles/modal.scss');
+import ModalComponent from './modal_component';
+require('../styles/project_modal.scss');
 
-const TIMEOUT = 550;
-class ProjectModal extends React.Component {
+class ProjectModal extends ModalComponent {
   constructor(props) {
     super(props);
-    this._initData();
-    this.closeModal = this.closeModal.bind(this);
-    this.maximizeModal = this.maximizeModal.bind(this);
-    this.minimizeModal = this.minimizeModal.bind(this);
   }
   
-  componentDidMount() {
-    if (this.props.match.params.projectName) {
-      window.setTimeout(() => {
-        const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
-        this.setState({data: data});
-        this.video.play();
-        this.video.playbackRate = 2.0;
-        this.maximizeModal();
-      }, 1);
-    }
+  onMount() {
+    const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
+    this.setState({data: data});
+    this.video.play();
+    this.video.playbackRate = 2.0;
   }
 
-  closeModal() {
-    this.minimizeModal();
-    window.setTimeout(() => {
-      window.location.href = '#/';
-    }, TIMEOUT);
-  }
-
-  minimizeModal() {
-    this.section.setAttribute("class", "modal");
-    document.body.removeAttribute("style");
-  }
-
-  maximizeModal() {
-    this.section.setAttribute("class", "modal active");
-    document.body.setAttribute("style", "overflow: hidden");
-  }
-
-  render() {
-    return (
-      <section ref={(el) => this.section = el} className="modal">
-        <button onClick={this.closeModal}>
-          <i className="fa fa-times"></i>
-        </button>
-        {this.renderProject()}
-      </section>
-    );
-  }
-
-  renderProject() {
+  renderModal() {
     if(!this.state.data)
       return null;
     const data = this.state.data;
@@ -94,7 +56,7 @@ class ProjectModal extends React.Component {
     return null;
   }
 
-  _initData() {   
+  _init() {   
     this.projects = [
       {
         name: 'Cloud Casts',
