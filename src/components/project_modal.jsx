@@ -7,9 +7,6 @@ class ProjectModal extends React.Component {
   constructor(props) {
     super(props);
     this._initData();
-    this.state = {
-      data: null
-    };
     this.closeModal = this.closeModal.bind(this);
     this.maximizeModal = this.maximizeModal.bind(this);
     this.minimizeModal = this.minimizeModal.bind(this);
@@ -18,11 +15,10 @@ class ProjectModal extends React.Component {
   componentDidMount() {
     if (this.props.match.params.projectName) {
       window.setTimeout(() => {
-      const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
-      this.setState({data: data});
-      this.video.play();
-      this.video.playbackRate = 2.0;
-      this.maximizeModal();
+        const data = this.projects.find((el) => this.props.match.params.projectName.toLowerCase().indexOf(el.search) >= 0);
+        this.setState({data: data});
+        this.video.play();
+        this.video.playbackRate = 2.0;
         this.maximizeModal();
       }, 1);
     }
@@ -228,6 +224,10 @@ class ProjectModal extends React.Component {
         ]
       }
     ];
+    
+    this.state = {
+      data: null
+    };
   }
 }
 
