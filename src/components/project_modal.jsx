@@ -203,6 +203,29 @@ class ProjectModal extends React.Component {
         tech: [
           "csharp"
         ]
+      },
+      {
+        name: 'Synapsis - Machine Learning',
+        search: 'synapsis',
+        source: 'Synapsis.mp4',
+        description: (
+          "Convolutional Neural Networks (CNN) is a common and handy technique in image processing. " +
+          "However, understanding how these networks work is, at best, convoluted (pun intended). " +
+          "Synapsis will train a CNN live in your browser, and will learn how to read handwriting in under five minutes!"
+        ),
+        github: 'https://github.com/ml653/synapsis',
+        live: 'https://synapsis-app.herokuapp.com/',
+        features: [
+          "Machine Learning Live in browser; no installation required",
+          "Reaches about 75% accuracy under two-minutes",
+          "Done through 100% front-end technologies.",
+          "Asynchronous computations utilizing both parallel and concurring multithreading in JavaScript." 
+        ],
+        tech: [
+          "vuejs",
+          "d3js",
+          "javascript"
+        ]
       }
     ];
   }
