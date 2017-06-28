@@ -64,6 +64,7 @@ class ResumeModal extends ModalComponent {
                   <h3>App Academy</h3>
                   <div className="indent">
                     <p>Web-Development</p>
+                    <p>Mar 2017 - Jun 2017</p>
                   </div>
                 </section>
                 <section className="borderless">
