@@ -108,7 +108,7 @@ class ProjectModal extends ModalComponent {
           "Listen to any and every podcast on the web, all from a single source."
         ),
         github: 'https://github.com/aelzeiny/Subdivisionary',
-        live: 'ccsfsubdivision.azurewebsites.net',
+        // live: 'ccsfsubdivision.azurewebsites.net',
         features: [
           "Digitized 8 applications and consolidated over 64 forms for 3 city departments",
           "Ability to create, submit, and track applications",

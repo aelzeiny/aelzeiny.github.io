@@ -1,6 +1,10 @@
 .modal {
   /****** Partial CSS Reset ********/
   .resume {
+    color: white;
+    h3 {
+      text-align: left;
+    }
     .download {
       float: right;
     }

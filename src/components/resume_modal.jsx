@@ -59,7 +59,7 @@ class ResumeModal extends ModalComponent {
                   <h3 className="edu">San Jose State University</h3>
                   <div className="indent">
                     <p>B.S Civil Engineering</p>
-                    <p>Minor Computer Science</p>
+                    <p>Minor Comp Sci</p>
                   </div>
                   <h3>App Academy</h3>
                   <div className="indent">
@@ -141,7 +141,7 @@ class ResumeModal extends ModalComponent {
                     SF Subdivision Application System 
                     <span className="links">
                       <a href="https://github.com/aelzeiny/Subdivisionary"><i className="fa fa-github"></i></a>
-                      <a href="http://ccsfsubdivision.azurewebsites.net/"><i className="fa fa-external-link-square"></i></a>
+                      <a href="/#/projects/Subdivisionary"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <h4>ASP.NET Core, Entity Framework, Identity Framework, Code-First Workflow</h4>
