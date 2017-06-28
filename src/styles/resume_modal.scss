@@ -6,7 +6,12 @@
       text-align: left;
     }
     .download {
-      float: right;
+      float: left;
+      text-align: center;
+      position: fixed;
+      i {
+        font-size: 40px;
+      }
     }
     h1, h2, h3, ul, h4{
       margin: 0;

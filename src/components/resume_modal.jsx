@@ -12,8 +12,10 @@ class ResumeModal extends ModalComponent {
     return (
         <div className="resume">
           <div className="download">
-            <a><i className="fa fa-pdf-o"></i></a><br/>
-            <h4>Made in HTML</h4>
+          
+            <p>This portfolio is made<br/> in React</p><br/>
+            <p>This resume is 100%<br/>HTML and CSS</p><br/>
+            <a href="assets/projects/Elzeiny_Resume_2017.pdf" download><i className="fa fa-file-pdf-o fa-6"></i><br/>PDF Download</a>
           </div>
           <div className="full-screen container">
             <header>
