@@ -21,7 +21,7 @@ class About extends React.Component {
               Engineer-In-Training (E.I.T) by <b>late afternoon</b>.
             </p>
             <p>
-              In July of this year I <b>graduated</b> from a full-time web-development course with less than 3% acceptance rate.
+              In June of last year I <b>graduated</b> from civil to full-stack engineering for the City and County of San Francisco.
               Finally, after 6 years of programming, I no longer have a coding <b>problem</b>; I now have a software-engineering <b>career</b>.
             </p>
           </div>
@@ -32,3 +32,5 @@ class About extends React.Component {
 }
 
 export default About;
+It’s time for me to finally admit it out loud - I have a coding problem. In college, my passion for coding had manifested itself into a CS minor. In between my rigorous engineering courses, I always had one or two spare projects; even during finals week. The pinnacle of my epidemic transpired in my last occupation, when I became a full-stack engineer by day and structural Engineer-In-Training (E.I.T) by late afternoon.
+ Finally, after 6 years of programming, I no longer have a coding problem; I now have a software-engineering career.
