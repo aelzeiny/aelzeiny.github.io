@@ -107,6 +107,9 @@ section {
   .container {
     width: 100%;
   }
+  #root {
+    overflow-x: hidden;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -142,5 +145,22 @@ section {
   .about #existential-text {
     display: flex;
     flex-direction: column-reverse;
+  }
+  section.contact {
+    flex-direction: column-reverse;
+    form {
+      width: 100%;
+    }
+    i {
+      min-width: auto;
+    }
+  }
+  section.contact .logos {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .5em;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
