@@ -87,7 +87,7 @@ class Skills extends React.Component {
         const bounds = this.svg.getBoundingClientRect();
         // this.buildSkills(data);
         const checkScroll = () => {
-            let dx = window.pageYOffset + window.innerHeight * .7 ;
+            let dx = window.pageYOffset + 300;
             if(dx > bounds.top) {
                 window.removeEventListener("scroll", checkScroll);
                 this.buildSkills(data);
@@ -140,13 +140,6 @@ class Skills extends React.Component {
             // .force('center', d3.forceCenter(centerX, centerY))
             .force('x', d3.forceX(centerX).strength(strength))
             .force('y', d3.forceY(centerY).strength(strength));
-
-        // reduce number of circles on mobile screen due to slow computation
-        if ('matchMedia' in window && window.matchMedia('(max-device-width: 767px)').matches) {
-            data = data.filter(el => {
-                return el.value >= 50;
-            });
-        }
 
         let root = d3.hierarchy({ children: data })
             .sum(d => d.value);
@@ -242,9 +235,6 @@ class Skills extends React.Component {
             .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
 
         // let curr, lastHighlighted;
-        node.on("click", data => {
-            this.highlight(data);
-        });
         node.on("mouseover", data => {
             this.highlight(data);
             // curr = data;

@@ -111,6 +111,8 @@ section {
     overflow-x: hidden;
   }
 }
+
+/* RESPONSIVE SECTION */
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -132,6 +134,10 @@ section {
 @media (max-width: 992px) { 
   h4 {
     text-align: center;
+  }
+
+  main {
+    padding: 10px;
   }
 
   .two-column {
@@ -162,5 +168,11 @@ section {
     font-size: .5em;
     margin-left: 0;
     margin-right: 0;
+  }
+  .modal .modal-content {
+    flex-direction: column-reverse;
+    .modal-sidebar {
+      width: 100%;
+    }
   }
 }
