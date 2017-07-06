@@ -242,6 +242,9 @@ class Skills extends React.Component {
             .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
 
         // let curr, lastHighlighted;
+        node.on("click", data => {
+            this.highlight(data);
+        });
         node.on("mouseover", data => {
             this.highlight(data);
             // curr = data;
