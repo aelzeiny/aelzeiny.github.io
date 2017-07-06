@@ -126,3 +126,17 @@ section {
   }
 }
 
+@media (max-width: 992px) { 
+  h4 {
+    text-align: center;
+  }
+
+  .two-column {
+    display: block;
+    .project-item {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
