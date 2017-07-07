@@ -51,7 +51,12 @@ figcaption {
 #layer-8 {
   background-image: url(../../assets/Layer8.svg);
 }
-
+#layer-A {
+  background-image: url(../../assets/SF.svg);
+}
+figcaption .sm {
+  visibility: hidden;
+}
 
 /*.modal::after {*/
 .modal {

@@ -107,6 +107,15 @@ section {
   .container {
     width: 100%;
   }
+  figcaption{
+    .sm {
+      visibility: visible;
+      text-align: center;
+    }
+    .lg {
+      visibility: hidden
+    }
+  }
   #root {
     overflow-x: hidden;
   }
