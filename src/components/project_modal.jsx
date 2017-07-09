@@ -51,7 +51,7 @@ class ProjectModal extends ModalComponent {
             </video>
             <br/>
             {data.tech.map(tech => (
-              <i key={"tech-" + tech} className={`devicon-${tech}-plain`}></i>
+              <i key={"tech-" + tech} className={`devicon-${tech}-plain-wordmark`}></i>
             ))}
           </div>
         </div>
@@ -91,7 +91,8 @@ class ProjectModal extends ModalComponent {
           "rails",
           "react",
           "redux",
-          "heroku",
+          "redis",
+          "amazonwebservices",
           "html5",
           "css3",
           "sass",
