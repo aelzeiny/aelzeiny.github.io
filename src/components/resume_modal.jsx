@@ -21,7 +21,7 @@ class ResumeModal extends ModalComponent {
             <header>
               <img id="header-mugshot" src="assets/Profile Picture-alt.png"></img>
               <div id="header-name">
-                <b>AHMED</b>
+                <b>ALEX</b>
                 <div className="header-last-name">
                   Elzeiny
                 </div>
