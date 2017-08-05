@@ -11,7 +11,7 @@ class About extends React.Component {
       <section className="about container" data-aos="fade-up">
         <h2>ABOUT</h2>
         <div id="existential-text">
-          <img id="profile" src="assets/portfolio.png"></img>
+          <img id="profile" src="assets/Profile Picture-alt.png"></img>
           <div>
             <p>
               It’s time for me to finally admit it out loud - <b>I have a coding problem</b>. In college, my <b>passion</b> for

@@ -12,14 +12,13 @@ class ResumeModal extends ModalComponent {
     return (
         <div className="resume">
           <div className="download">
-          
             <p>This portfolio is made<br/> in React</p><br/>
             <p>This resume is 100%<br/>HTML and CSS</p><br/>
             <a href="assets/projects/Elzeiny_Resume_2017.pdf" download><i className="fa fa-file-pdf-o fa-6"></i><br/>PDF Download</a>
           </div>
           <div className="full-screen container">
             <header>
-              <img id="header-mugshot" src="qrcode_phone.png"></img>
+              <img id="header-mugshot" src="assets/qrcode_phone.png"></img>
               <div id="header-name">
                 <b>ALFRED</b>
                 <div className="header-last-name">
