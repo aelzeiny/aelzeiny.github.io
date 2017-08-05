@@ -146,7 +146,7 @@ class ResumeModal extends ModalComponent {
                     SF Subdivision Application System 
                     <span className="links">
                       <a href="https://github.com/aelzeiny/Subdivisionary"><i className="fa fa-github"></i></a>
-                      <a href="www.elzeiny.io/#/projects/Subdivisionary"><i className="fa fa-external-link-square"></i></a>
+                      <a href="http://www.elzeiny.io/#/projects/Subdivisionary"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <h4>ASP.NET Core, Entity Framework, Identity Framework, Code-First Workflow</h4>
@@ -163,7 +163,7 @@ class ResumeModal extends ModalComponent {
                     Synapsis, Machine Learning Visualization 
                     <span className="links">
                       <a href="https://github.com/ml653/synapsis" target="_blank"><i className="fa fa-github"></i></a>
-                      <a href="www.synapsis.network" target="_blank"><i className="fa fa-external-link-square"></i></a>
+                      <a href="http://www.synapsis.network" target="_blank"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <h4>JavaScript ES6, Vue, D3, Webworker</h4>
@@ -188,7 +188,7 @@ class ResumeModal extends ModalComponent {
                   <h3>
                     Data-Structures in 1000 words 
                     <span className="links">
-                        <a href="" target="_blank"><i className="fa fa-github"></i></a>
+                        <a href="https://github.com/aelzeiny/AlgorithmsIn1000Words" target="_blank"><i className="fa fa-github"></i></a>
                     </span>
                   </h3>
                   <ul>
