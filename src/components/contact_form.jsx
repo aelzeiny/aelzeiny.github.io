@@ -5,7 +5,7 @@ class ContactForm extends React.Component{
   }
 
   render() {
-    return (<form action="https://formspree.io/alfred@elzeiny.io" method="POST">
+    return (<form action="https://formspree.io/alfred.elzeiny@gmail.com" method="POST">
         <div className="group">
           <input type="text" name="name"  id="name" required></input>
           <span className="highlight"></span>

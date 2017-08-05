@@ -8,7 +8,7 @@ class Contact extends React.Component{
     super(props);
     this.iconHover = this.iconHover.bind(this);
     this.state = {
-      active: 'alfred@elzeiny.io'
+      active: 'alfred.elzeiny@gmail.com'
     };
   }
 
@@ -27,7 +27,7 @@ class Contact extends React.Component{
         <section className="contact container" data-aos="zoom-in-up">
           <ContactForm />
           <div className="logos flexbox">
-            <a className="logo" onMouseOver={this.iconHover} data-active="alfred@elzeiny.io">
+            <a className="logo" onMouseOver={this.iconHover} data-active="alfred.elzeiny@gmail.com">
               <i className="fa fa-envelope"></i>
             </a>
             

@@ -30,9 +30,9 @@ class ResumeModal extends ModalComponent {
               </div>
               <ul id="header-icons">
                 <li className="header-icon">
-                  <a href="mailto:Alfred@elzeiny.io" target="_blank">
+                  <a href="mailto:Alfred.elzeiny@gmail.com" target="_blank">
                     <i className="flaticon flaticon-multimedia"></i>
-                    alfred@elzeiny.io
+                    alfred.elzeiny@gmail.com
                   </a>
                 </li>
                 <li className="header-icon">
