@@ -19,9 +19,9 @@ class ResumeModal extends ModalComponent {
           </div>
           <div className="full-screen container">
             <header>
-              <img id="header-mugshot" src="assets/Profile Picture-alt.png"></img>
+              <img id="header-mugshot" src="qrcode_phone.png"></img>
               <div id="header-name">
-                <b>ALEX</b>
+                <b>ALFRED</b>
                 <div className="header-last-name">
                   Elzeiny
                 </div>
@@ -31,9 +31,9 @@ class ResumeModal extends ModalComponent {
               </div>
               <ul id="header-icons">
                 <li className="header-icon">
-                  <a href="mailto:ahmed.elzeiny@gmail.com" target="_blank">
+                  <a href="mailto:Alfred@elzeiny.io" target="_blank">
                     <i className="flaticon flaticon-multimedia"></i>
-                    ahmed.elzeiny@gmail.com
+                    alfred@elzeiny.io
                   </a>
                 </li>
                 <li className="header-icon">
@@ -60,56 +60,60 @@ class ResumeModal extends ModalComponent {
                   <h2>EDUCATION</h2>
                   <h3 className="edu">San Jose State University</h3>
                   <div className="indent">
+                    <p><b>Aug 2011 - May 2016</b></p>
+                    <p>Minor Computer Sci</p>
+                    <p>Minor Mathmatics</p>
                     <p>B.S Civil Engineering</p>
-                    <p>Minor Comp Sci</p>
+                    <p>Deans List Honorary</p>
                   </div>
                   <h3>App Academy</h3>
                   <div className="indent">
+                    <p><b>Mar 2017 - Jul 2017</b></p>
                     <p>Web-Development</p>
-                    <p>Mar 2017 - Jun 2017</p>
                   </div>
                 </section>
-                <section className="borderless">
+                
+                <section>
                   <h2>SKILLS</h2>
                   <h3>FRONT-END</h3>
                   <ul className="skills">
-                    <li><p>React </p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>Redux</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>Vue</p><div className="star-ranking"><div className="star-4-5">★★★★★</div></div></li>
-                    <li><p>CSS/SASS</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>HTML 5</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>jQuery</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>Bootstrap</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>D3</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
+                    <li><p>React </p></li>
+                    <li><p>Redux</p></li>
+                    <li><p>VueJS</p></li>
+                    <li><p>D3</p></li>
                   </ul>
                   <h3>BACK-END</h3>
                   <ul className="skills">
-                    <li><p>Ruby on Rails</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>PostgreSQL</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
-                    <li><p>NodeJS</p><div className="star-ranking"><div className="star-3-5">★★★★★</div></div></li>
-                    <li><p>ASP.NET</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                  </ul>
-                  <h3>Tooling</h3>
-                  <ul className="skills">
-                    <li><p>Heroku</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>AWS</p><div className="star-ranking"><div className="star-3-5">★★★★★</div></div></li>
-                    <li><p>Webpack</p><div className="star-ranking"><div className="star-4">★★★★★</div></div></li>
-                    <li><p>Git</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
+                    <li><p>Ruby on Rails</p></li>
+                    <li><p>PostgreSQL</p></li>
+                    <li><p>NodeJS</p></li>
+                    <li><p>ASP.NET</p></li>
+                    <li><p>Azure</p></li>
+                    <li><p>AWS</p></li>
                   </ul>
                   <h3>Languages</h3>
                   <ul className="skills">
-                    <li><p>C#</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>Ruby</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>JavaScript</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>Java</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
-                    <li><p>English</p><div className="star-ranking"><div className="star-5">★★★★★</div></div></li>
+                    <li><p>C#</p></li>
+                    <li><p>Ruby</p></li>
+                    <li><p>JavaScript</p></li>
+                    <li><p>Java</p></li>
+                    <li><p>Friendship</p></li>
+                  </ul>
+                </section>
+
+                <section className="borderless">
+                  <h2>CERTIFICATES</h2>
+                  <ul className="skills">
+                    <li><p>AWS Associate Developer</p></li>
+                    <li><p>Engineer-In-Training (EIT)</p></li>
+                    <li><p>Google Analytics</p></li>
                   </ul>
                 </section>
               </nav>
               <article>
                 <section>
                   <h2>PROFESSIONAL EXPERIENCE</h2>
-                  <h3>FULLSTACK ENGINEER</h3>
+                  <h3>FULLSTACK SOFTWARE ENGINEER</h3>
                   <h4>DEPARTMENT OF PUBLIC WORKS – SAN FRANCISCO, CA, JUNE 2016 – MARCH 2017</h4>
                   <ul>
                     <li>Conceptualized, designed, and built user and staff friendly automation websites </li>
@@ -139,11 +143,11 @@ class ResumeModal extends ModalComponent {
                       Implemented an image sampling algorithm that derives contrasting colors to dynamically generate asthetically pleasing color pallets
                     </li>
                   </ul>
-                  <h3>
+                  <h3>  
                     SF Subdivision Application System 
                     <span className="links">
                       <a href="https://github.com/aelzeiny/Subdivisionary"><i className="fa fa-github"></i></a>
-                      <a href="/#/projects/Subdivisionary"><i className="fa fa-external-link-square"></i></a>
+                      <a href="www.elzeiny.io/#/projects/Subdivisionary"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <h4>ASP.NET Core, Entity Framework, Identity Framework, Code-First Workflow</h4>
@@ -153,14 +157,14 @@ class ResumeModal extends ModalComponent {
                         Standardized an online application system resulting in the completion of 3 months of backlogged projects within a timespan of week and a half.
                       </li>
                       <li>
-                        Converted a total of eight applications and 64 highly modular forms, all redesigned for a mobile-responsive and streamlined experience.
+                        Converted a total of eight applications and 64 highly modular forms, all redesigned for a mobile-responsive and streamlined experience deployed on Azure Cloud.
                       </li>
                   </ul>
                   <h3>
                     Synapsis, Machine Learning Visualization 
                     <span className="links">
                       <a href="https://github.com/ml653/synapsis" target="_blank"><i className="fa fa-github"></i></a>
-                      <a href="https://synapsis-app.herokuapp.com/" target="_blank"><i className="fa fa-external-link-square"></i></a>
+                      <a href="www.synapsis.network" target="_blank"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <h4>JavaScript ES6, Vue, D3, Webworker</h4>
@@ -186,12 +190,11 @@ class ResumeModal extends ModalComponent {
                     Data-Structures in 1000 words 
                     <span className="links">
                         <a href="" target="_blank"><i className="fa fa-github"></i></a>
-                        <a href="" target="_blank"><i className="fa fa-external-link-square"></i></a>
                     </span>
                   </h3>
                   <ul>
                     <li>
-                      Implemented interactive animations for 12 essential data-structures often taught in upper-division CS classes
+                      Implemented interactive animations for 12 essential data-structures often taught in upper-division CS classes (in-progress)
                     </li>
                   </ul>
                 </section>

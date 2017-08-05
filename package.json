@@ -1,8 +1,8 @@
 {
-  "name": "alex-elzeiny-portfolio",
+  "name": "alfred-elzeiny-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Alex Elzeiny Portfolio",
+  "description": "Alfred Elzeiny Portfolio",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p"
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/aelzeiny/aelzeiny.github.io"
   },
-  "author": "Alex elzeiny",
+  "author": "Alfred elzeiny",
   "license": "MIT",
   "dependencies": {
     "aos": "^2.1.1",
