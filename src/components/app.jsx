@@ -18,7 +18,7 @@ export default function App(props) {
             <main>
                 <About />
                 <Projects />
-                <Skills />
+                {/*<Skills />*/}
                 <Contact />
                 <Switch>
                     <Route path="/projects/Resume" component={ResumeModal} />
