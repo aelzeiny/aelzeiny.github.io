@@ -21,7 +21,7 @@ class About extends React.Component {
               Engineer-In-Training (E.I.T) by <b>late afternoon</b>.
             </p>
             <p>
-              In June of last year I <b>graduated</b> from civil to full-stack engineering for the City and County of San Francisco.
+              In June of 2016 I <b>graduated</b> from civil to full-stack engineering for the City and County of San Francisco.
               Finally, after 6 years of programming, I no longer have a coding <b>problem</b>; I now have a software-engineering <b>career</b>.
             </p>
           </div>

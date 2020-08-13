@@ -16,11 +16,11 @@ class Skills extends React.Component {
     componentDidMount() {
         let data = [
             {
-                cat: 'backend', name: 'ASP.Net CORE', value: 3,
+                cat: 'backend', name: 'ASP.Net CORE', value: 4,
                 icon: '/assets/coding_icons/asp-net.png'
             },
             {
-                cat: 'frontend', name: 'Bootstrap 4', value: 5,
+                cat: 'frontend', name: 'Bootstrap 4', value: 4,
                 icon: '/assets/coding_icons/bootstrap-4.svg'
             },
             {
@@ -68,7 +68,7 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/react.jpg'
             },
             {
-                cat: 'frontend', name: 'Redux', value: 5,
+                cat: 'frontend', name: 'Redux', value: 4,
                 icon: '/assets/coding_icons/redux.png'
             },
             {
@@ -84,16 +84,20 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/aws.png'
             },
             {
-                cat: 'backend', name: 'Airflow', value: 5,
+                cat: 'data', name: 'Airflow', value: 5,
                 icon: '/assets/coding_icons/airflow.png'
             },
             {
-                cat: 'backend', name: 'Hadoop', value: 4,
+                cat: 'data', name: 'Hadoop', value: 4,
                 icon: '/assets/coding_icons/hadoop.png'
             },
             {
-                cat: 'backend', name: 'Spark', value: 5,
+                cat: 'data', name: 'Spark', value: 5,
                 icon: '/assets/coding_icons/spark.png'
+            },
+            {
+                cat: 'data', name: 'Hive, Presto, Athena', value: 4,
+                icon: '/assets/coding_icons/hive.png'
             }
         ];
         // const bounds = this.svg.getBoundingClientRect();
@@ -112,7 +116,7 @@ class Skills extends React.Component {
                 category: 'none',
                 name: "",
                 rank: 0
-            })
+            });
         });
     }
 
@@ -131,7 +135,7 @@ class Skills extends React.Component {
 
         let format = d3.format(',d');
         let allCats = {};
-        const colors = ['#bd589e', '#6b3d71', '#ffa4e3', 'blue'];
+        const colors = ['#bd589e', '#6b3d71', '#ffa4e3', '#a053aa', 'blue'];
         let scaleColor = (cat) => {
             if(!allCats[cat])
                 allCats[cat] = colors[Object.keys(allCats).length];

@@ -20,6 +20,9 @@ section.skills {
     &.backend {
         background-color: #bd589e;
     }
+    &.data {
+        background-color: #a053aa;
+    }
     &.language {
         background-color: #ffa4e3;
     }
@@ -59,7 +62,7 @@ section.skills {
         color: #c5c5c5;
         font-size: 25px;
         height: 25px;
-        width: 100px;
+        width: 125px;
         margin: 0 auto;
         position: relative;
         padding: 0;

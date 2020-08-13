@@ -104,9 +104,7 @@ class ProjectModal extends ModalComponent {
         search: 'subdivisionary',
         source: 'Subdivisionary.mp4',
         description: (
-          "CloudCasts is a podcast streaming app featuring original UI and mobile-responsive design. " +
-          "This app pull from a variety of podcast directories (including ITunes) and RSS feeds to sort podcasts based on popularity. " +
-          "Listen to any and every podcast on the web, all from a single source."
+          "Subdivisionary is a public tool developed for the San Francisco Department of Public Works."
         ),
         github: 'https://github.com/aelzeiny/Subdivisionary',
         // live: 'ccsfsubdivision.azurewebsites.net',
@@ -187,7 +185,7 @@ class ProjectModal extends ModalComponent {
           "Machine Learning Live in browser; no installation required",
           "Reaches about 75% accuracy under two-minutes",
           "Done through 100% front-end technologies.",
-          "Asynchronous computations utilizing both parallel and concurring multithreading in JavaScript." 
+          "Asynchronous computations utilizing both parallel and concurring multithreading in JavaScript."
         ],
         tech: [
           "vuejs",
