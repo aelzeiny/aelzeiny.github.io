@@ -16,7 +16,7 @@ class Skills extends React.Component {
     componentDidMount() {
         let data = [
             {
-                cat: 'backend', name: 'ASP.Net CORE', value: 4,
+                cat: 'backend', name: 'ASP.Net CORE', value: 3,
                 icon: '/assets/coding_icons/asp-net.png'
             },
             {
@@ -28,8 +28,8 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/csharp.svg'
             },
             {
-                cat: 'frontend', name: 'D3.js', value: 4,
-                icon: '/assets/coding_icons/d3.png'
+                cat: 'language', name: 'Python', value: 5,
+                icon: '/assets/coding_icons/python.png'
             },
             {
                 cat: 'backend', name: 'Git', value: 4,
@@ -52,7 +52,7 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/jquery.png'
             },
             {
-                cat: 'backend', name: 'NodeJS', value: 3,
+                cat: 'backend', name: 'NodeJS', value: 5,
                 icon: '/assets/coding_icons/nodejs.svg'
             },
             {
@@ -76,12 +76,24 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/ruby.png'
             },
             {
-                cat: 'frontend', name: 'SASS', value: 5,
-                icon: '/assets/coding_icons/sass.png'
+                cat: 'backend', name: 'Docker', value: 4,
+                icon: '/assets/coding_icons/docker.png'
             },
             {
-                cat: 'backend', name: 'Webpack', value: 3,
-                icon: '/assets/coding_icons/webpack.png'
+                cat: 'backend', name: 'AWS as an ecosystem', value: 5,
+                icon: '/assets/coding_icons/aws.png'
+            },
+            {
+                cat: 'backend', name: 'Airflow', value: 5,
+                icon: '/assets/coding_icons/airflow.png'
+            },
+            {
+                cat: 'backend', name: 'Hadoop', value: 4,
+                icon: '/assets/coding_icons/hadoop.png'
+            },
+            {
+                cat: 'backend', name: 'Spark', value: 5,
+                icon: '/assets/coding_icons/spark.png'
             }
         ];
         // const bounds = this.svg.getBoundingClientRect();
@@ -243,7 +255,7 @@ class Skills extends React.Component {
                 lastMouseOver.r = lastMouseOver.radius;
             }
             lastMouseOver = data;
-            const ir = d3.interpolateNumber(data.r, data.radius * 3);
+            const ir = d3.interpolateNumber(data.r, data.radius * 1.5);
             d3.transition(500).ease(d3.easePolyOut).tween(`expand-${data.name}`, () => {
                 return t => {
                     data.r = ir(t);
