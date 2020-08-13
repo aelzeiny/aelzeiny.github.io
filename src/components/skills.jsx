@@ -9,7 +9,8 @@ class Skills extends React.Component {
         this.state = {
             category: 'none',
             name: "",
-            rank: 0
+            rank: 0,
+            data: []
         };
     }
     componentDidMount() {
@@ -83,17 +84,17 @@ class Skills extends React.Component {
                 icon: '/assets/coding_icons/webpack.png'
             }
         ];
-        
-        const bounds = this.svg.getBoundingClientRect();
+        // const bounds = this.svg.getBoundingClientRect();
         // this.buildSkills(data);
-        const checkScroll = () => {
-            let dx = window.pageYOffset + 300;
-            if(dx > bounds.top) {
-                window.removeEventListener("scroll", checkScroll);
-                this.buildSkills(data);
-            }
-        }
-        window.addEventListener("scroll", checkScroll);
+        // const checkScroll = () => {
+        //     let dx = window.pageYOffset + 300;
+        //     if(dx > bounds.top) {
+        //         window.removeEventListener("scroll", checkScroll);
+        //         this.buildSkills(data);
+        //     }
+        // }
+        this.buildSkills(data);
+        // window.addEventListener("scroll", checkScroll);
         this.svg.addEventListener("mouseleave", e => {
             this.setState({
                 category: 'none',
@@ -234,25 +235,24 @@ class Skills extends React.Component {
         node.append('title')
             .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
 
-        // let curr, lastHighlighted;
+        let lastMouseOver = null;
         node.on("mouseover", data => {
+            if (lastMouseOver && data.name === lastMouseOver.name)
+                return;
+            if (lastMouseOver) {
+                lastMouseOver.r = lastMouseOver.radius;
+            }
+            lastMouseOver = data;
+            const ir = d3.interpolateNumber(data.r, data.radius * 3);
+            d3.transition(500).ease(d3.easePolyOut).tween(`expand-${data.name}`, () => {
+                return t => {
+                    data.r = ir(t);
+                    simulation.force('collide', forceCollide);
+                    this.setState({});
+                }
+            });
+
             this.highlight(data);
-            // curr = data;
-            // d3.transition(500).ease(d3.easePolyOut).tween("expand", function() {
-			// 	let ir = d3.interpolateNumber(curr.r, curr.radius * 1.5);
-            //     let rir;
-            //     if (lastHighlighted) {
-            //         rir = d3.interpolateNumber(lastHighlighted.r, curr.radius);
-            //     }
-            //     return t => {
-            //         curr.r = ir(t);
-            //         if (lastHighlighted)
-            //             lastHighlighted.r = rir(t);
-			// 		simulation.force('collide', forceCollide);
-            //     }
-            // }).on("interrupt", () => {
-            //     data.r = data.radius;
-            // });
         });
 
         node.on("click", data => this.highlight(data));
@@ -274,7 +274,7 @@ class Skills extends React.Component {
                 <h2>SKILLS</h2>
                 <div className="container">
                     {this.renderHighlights()}
-                    <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"></svg>
+                    <svg id="skills-svg" ref={(el) => this.svg = el} width="100%" height="500"/>
                 </div>
             </section>
         );

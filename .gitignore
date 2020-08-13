@@ -6,3 +6,7 @@ node_modules
 
 # Files marked with gitigx
 *gitigx*
+
+# IDEs
+.idea
+.vscode
