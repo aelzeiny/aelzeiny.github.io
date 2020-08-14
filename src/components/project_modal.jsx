@@ -194,7 +194,7 @@ class ProjectModal extends ModalComponent {
         ]
       },
       {
-        name: 'Twitch Roulette - Anway Can Play my Switch',
+        name: 'Twitch Roulette - Anyone Can Play my Switch',
         search: 'roulette',
         source: 'TwitchArena.webm',
         description: (
