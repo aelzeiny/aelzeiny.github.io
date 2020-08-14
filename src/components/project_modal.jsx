@@ -192,6 +192,34 @@ class ProjectModal extends ModalComponent {
           "d3js",
           "javascript"
         ]
+      },
+      {
+        name: 'Twitch Roulette - Anway Can Play my Switch',
+        search: 'roulette',
+        source: 'TwitchArena.webm',
+        description: (
+          "Anyone in the world can stream themselves playing Nintendo Switch on my Twitch Channel! " +
+          "Join a video-chat room with my Nintendo Switch, and use your keyboard as a controller. " +
+          "If more than one person is playing at a time, then all players fight over the controls tug-a-war style. "
+        ),
+        github: 'https://github.com/aelzeiny/RandomTwitchersPlays',
+        live: 'https://twitcharena.live',
+        features: [
+          "WebRTC & Low-latency Video Streaming (less than 1 second)",
+          "Websocket to transport controller inputs",
+          "NGinX to relay traffic to microservices",
+          "100% Serverless architecture can scale to hundreds of thousands of players",
+          "Arduino circuit-board to emulate a fake controller for the Nintendo Switch."
+        ],
+        tech: [
+          "WebRTC",
+          "WebSockets",
+          "NGinX",
+          "Redis",
+          "AWS API Gateway (HTTP & WebSockets)",
+          "Docker",
+          "3 programming langauges: Python, JS, and Java"
+        ]
       }
     ];
     
