@@ -45,7 +45,7 @@ class ProjectModal extends ModalComponent {
           </div>
           
           <div className="modal-tech">
-            <video ref={el => this.video = el} autoPlay muted loop>
+            <video ref={el => this.video = el} autoPlay muted loop controls>
               <source src={`assets/projects/${data.source}`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
@@ -196,7 +196,7 @@ class ProjectModal extends ModalComponent {
       {
         name: 'Twitch Roulette - Anyone Can Play my Switch',
         search: 'roulette',
-        source: 'TwitchArena.webm',
+        source: 'TwitchArena.mp4',
         description: (
           "Anyone in the world can stream themselves playing Nintendo Switch on my Twitch Channel! " +
           "Join a video-chat room with my Nintendo Switch, and use your keyboard as a controller. " +
