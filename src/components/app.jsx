@@ -16,18 +16,25 @@ export default function App(props) {
     return (
         <div>
             <Parallax/>
-            <main>
-                <About />
-                <Projects />
-                <Skills />
-                <Contact />
-                <Switch>
-                    <Route path="/blog/:blog_id" component={BlogIndex} />
-                    <Route path="/blog" component={BlogIndex} />
-                    <Route path="/projects/Resume" component={ResumeModal} />
-                    <Route path="/projects/:projectName" component={ProjectModal} />
-                </Switch>
-            </main>
+            <Switch>
+                <Route path="/blog">
+                    <main>
+                        <BlogIndex/>
+                    </main>
+                </Route>
+                <Route path="/">
+                    <main>
+                        <About />
+                        <Projects />
+                        <Skills />
+                        <Contact />
+                        <Switch>
+                            <Route path="/projects/Resume" component={ResumeModal} />
+                            <Route path="/projects/:projectName" component={ProjectModal} />
+                        </Switch>
+                    </main>
+                </Route>
+            </Switch>
         </div>
     );
 };
