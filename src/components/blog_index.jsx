@@ -1,5 +1,8 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+
+import BatchVsCelery from './blogs/batch_v_celery';
+
 import '../styles/blog.scss'
 
 export default class BlogIndex extends React.Component {
@@ -7,17 +10,15 @@ export default class BlogIndex extends React.Component {
         super(props);
 
         this.posts = [
-            {date: '2020-11-23', blogId: 'batch-v-celery', title: '[Airflow] AWS Batch Executor >= Celery Executor'},
-            {date: '2020-11-20', blogId: 'airlow-aws-motivation', title: '[Airflow] Motivation Behind Building AWS Native Executors'},
-            {date: '2018-12-01', blogId: 'dags-datastructure', title: 'Directed Acylic Graphs - The Design Pattern'},
+            {date: '2020-11-23', blogId: 'batch-v-celery', title: '[Airflow] AWS Batch Executor >= Celery Executor', component: BatchVsCelery},
+            // {date: '2020-11-20', blogId: 'airlow-aws-motivation', title: '[Airflow] Motivation Behind Building AWS Native Executors', component: NULL},
+            // {date: '2018-12-01', blogId: 'dags-datastructure', title: 'Directed Acylic Graphs - The Design Pattern', component: NULL},
         ];
     }
 
-    renderRoute({date, blogId, title}) {
+    renderRoute({ blogId, component }) {
         return (
-            <Route path={`/blog/${blogId}`}>
-                <li>{date}  {title}</li>
-            </Route>
+            <Route path={`/blog/${blogId}`} component={component}/>
         );
     }
 
@@ -30,13 +31,15 @@ export default class BlogIndex extends React.Component {
     render() {
         return (
             <section id="blog-div" className="container">
-                <h2>Blog</h2>
-                {/* <Switch>
+                <h2>Data Blog</h2>
+                <Switch>
                     {this.posts.map(this.renderRoute)}
-                </Switch> */}
-                <ul>
-                    {this.posts.map(this.renderPost)}
-                </ul>
+                    <Route path="/">
+                        <ul>
+                            {this.posts.map(this.renderPost)}
+                        </ul>
+                    </Route>
+                </Switch>
             </section>
         );
     }
