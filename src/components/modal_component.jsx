@@ -22,7 +22,7 @@ class ModalComponent extends React.Component {
   closeModal() {
     this.minimizeModal();
     window.setTimeout(() => {
-      window.location.href = '#/';
+      this.props.history.goBack();
     }, TIMEOUT);
   }
 
@@ -32,7 +32,6 @@ class ModalComponent extends React.Component {
   }
 
   maximizeModal() {
-    console.log("MODAL OPEN");
     this.section.setAttribute("class", "modal active");
     document.body.setAttribute("style", "overflow: hidden");
   }

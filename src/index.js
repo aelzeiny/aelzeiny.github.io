@@ -2,7 +2,7 @@ import AOS from 'aos';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route } from 'react-router-dom';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // checkSmoothScroll();
   const RoutedApp = (props) => {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     );
   };
   const root = document.getElementById("root");

@@ -46,7 +46,7 @@ class ProjectModal extends ModalComponent {
           
           <div className="modal-tech">
             <video ref={el => this.video = el} autoPlay muted loop controls>
-              <source src={`assets/projects/${data.source}`} type="video/mp4"/>
+              <source src={`/assets/projects/${data.source}`} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
             <br/>
