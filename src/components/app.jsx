@@ -23,6 +23,7 @@ export default function App(props) {
                 <Contact />
                 <Switch>
                     <Route path="/blog/:blog_id" component={BlogIndex} />
+                    <Route path="/blog" component={BlogIndex} />
                     <Route path="/projects/Resume" component={ResumeModal} />
                     <Route path="/projects/:projectName" component={ProjectModal} />
                 </Switch>
