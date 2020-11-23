@@ -9,6 +9,7 @@ class ModalComponent extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.maximizeModal = this.maximizeModal.bind(this);
     this.minimizeModal = this.minimizeModal.bind(this);
+    this.monitorEscape = this.monitorEscape.bind(this);
     this._init();
   }
 
@@ -22,17 +23,24 @@ class ModalComponent extends React.Component {
   closeModal() {
     this.minimizeModal();
     window.setTimeout(() => {
-      window.location.href = '#/';
+      this.props.history.goBack();
     }, TIMEOUT);
   }
 
   minimizeModal() {
+    document.removeEventListener("keydown", this.monitorEscape, false);
     this.section.setAttribute("class", "modal");
     document.body.removeAttribute("style");
   }
 
+  monitorEscape(event) {
+    if(event.keyCode === 27) {
+      this.closeModal();
+    }
+  }
+
   maximizeModal() {
-    console.log("MODAL OPEN");
+    document.addEventListener("keydown", this.monitorEscape, false);
     this.section.setAttribute("class", "modal active");
     document.body.setAttribute("style", "overflow: hidden");
   }

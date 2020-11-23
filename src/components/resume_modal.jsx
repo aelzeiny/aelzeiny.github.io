@@ -15,11 +15,11 @@ class ResumeModal extends ModalComponent {
 
             <p>This portfolio is made<br/> in React</p><br/>
             <p>This resume is 100%<br/>HTML and CSS</p><br/>
-            <a href="assets/projects/Elzeiny_Resume_2020.pdf" download><i className="fa fa-file-pdf-o fa-6"></i><br/>PDF Download</a>
+            <a href="/assets/projects/Elzeiny_Resume_2020.pdf" download><i className="fa fa-file-pdf-o fa-6"></i><br/>PDF Download</a>
           </div>
           <div className="full-screen container">
             <header>
-              <img id="header-mugshot" src="assets/Profile Picture-alt.png"></img>
+              <img id="header-mugshot" src="/assets/Profile Picture-alt.png"></img>
               <div id="header-name">
                 <b>AHMED</b>
                 <div className="header-last-name">
