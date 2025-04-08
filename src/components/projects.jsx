@@ -20,9 +20,6 @@ export default function Projects(props) {
                     <ProjectItem title="Subdivisionary - San Francisco Public Works Website" img="SAS.png" aos="zoom-in-left"/>
                     <ProjectItem title="CAST2000 - Canoe Hull Structural Analyzer" img="Cast2000.PNG" aos="zoom-in-right"/>
                 </div>
-                <div className="two-column">
-                    <ProjectItem title="Resume" img="Resume.PNG" aos="zoom-in-up"/>
-                </div>
             </div>
         </section>
     );
