@@ -39,7 +39,7 @@ class Parallax extends React.Component {
             <figcaption>
                 <div className="layer parallax lg" id="layer-8" data-parallax-ratio="3"></div>
                 <div className="layer parallax lg" data-parallax-ratio="3">
-                    <h1>Ahmed Elzeiny</h1>
+                    <h1>Alfred Elzeiny</h1>
                     <h2>Software Engineer</h2>
                     <p className="cursive">In the bay area</p>
                 </div>
@@ -53,7 +53,7 @@ class Parallax extends React.Component {
                 <div className="layer lg" id="layer-0"></div>
                 <div className="layer sm" id="layer-A"></div>
                 <div className="layer sm">
-                    <h1>Ahmed Elzeiny</h1>
+                    <h1>Alfred Elzeiny</h1>
                     <h2>Software Engineer</h2>
                     <p className="cursive">In the bay area</p>
                 </div>
