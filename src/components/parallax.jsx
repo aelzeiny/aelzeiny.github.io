@@ -34,6 +34,7 @@ class Parallax extends React.Component {
         }
     }
     
+    // Parallax
     render() {
         return (
             <figcaption>
